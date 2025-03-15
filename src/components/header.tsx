@@ -89,11 +89,7 @@ const Header = () => {
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            {/* <SheetTitle>Are you absolutely sure?</SheetTitle> */}
-            {/* <SheetDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </SheetDescription> */}
+            
             <div className=" p-2 font-medium flex flex-col">
         {navLinks.map((link: NavProp) => {
           return (
