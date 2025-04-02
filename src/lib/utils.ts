@@ -7,20 +7,20 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const serviceLink =[
-  {name: "Flex Print", href: "/"},
-  {name: "T-Shirt Print", href: "/"},
-  {name: "Mug Print", href: "/"},
+  {name: "Flex Print", href: "ho"},
+  {name: "T-Shirt Print", href: "contactus"},
+  {name: "Mug Print", href: "jjj"},
   {name: "Vinayl Print", href: "aboutUs"},
   ]
 
 export const navLinks =[
   {name: "Home", href: "/"},
-  {name: "About Us", href: "/"},
+  {name: "About Us", href: "aboutUs"},
   {name: "Service", href: "/"},
   {name: "Contact Us", href: "/"},
 ]
 export type ServiceData = {
-  img: any;
+  img: unknown;
   title: string;
   description: string;
 }
@@ -80,3 +80,4 @@ export const testimonials = [
     src: "/test.png",
   },
 ];
+

@@ -3,6 +3,7 @@
 
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
+import { Users } from "lucide-react";
 
 interface CountUpProps {
     to: number;
@@ -99,3 +100,5 @@ export default function CountUp({
 
     return <span className={`${className}`} ref={ref} />;
 }
+
+

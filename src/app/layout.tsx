@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
-import { Poppins } from "next/font/google";
+// import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import Footer from "@/components/ui/footer";
 
 
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"], // Choose font weights
-  variable: "--font-poppins", // Add CSS variable
-});
+// const poppins = Poppins({
+//   subsets: ["latin"],
+//   weight: ["300", "400", "700"], // Choose font weights
+//   variable: "--font-poppins", // Add CSS variable
+// });
 
 export const metadata: Metadata = {
   title: "Fast Print",
@@ -29,6 +30,7 @@ export default function RootLayout({
       >
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

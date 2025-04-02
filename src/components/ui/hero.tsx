@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import HeroImg from "../../../public/Images/ab1 1.png";
 import RotatingText from "../RotatingText";
-
+ const texts = ["T-shirt", "Caps", "Flex", "Vinyal"]
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center ">
@@ -15,7 +15,8 @@ const Hero = () => {
               The Leader In Quality Custom Print Design <br />
             </h1>
             <RotatingText
-              texts={["T-shirt", "Caps", "Flex", "Vinyal"]}
+              texts={texts}
+              
               mainClassName="px-2 sm:px-2 md:px-3 bg-transparent text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg text-4xl md:text-7xl font-extrabold"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
@@ -27,10 +28,10 @@ const Hero = () => {
               rotationInterval={2000}
             />
             <div className="w-[100%] flex justify-center">
-            <p className="mt-4 text-lg text-gray-700 font-semibold w-2/3 text-center">
-              We provide high-quality outdoor advertising solutions with premium
-              billboards.
-            </p>
+              <p className="mt-4 text-lg text-gray-700 font-semibold w-2/3 text-center">
+                We provide high-quality outdoor advertising solutions with premium
+                billboards.
+              </p>
             </div>
             {/* <button className="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
               Get Started

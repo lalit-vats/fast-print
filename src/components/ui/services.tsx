@@ -36,19 +36,7 @@ const Services = () => {
                     );
                 })}
             </div>
-            {/* <div className="flex justify-center">
-        <div className="flex items-center gap-3">
-          <Users height={40} width={40} />
-          <CountUp
-            from={0}
-            to={100}
-            separator=","
-            direction="up"
-            duration={1}
-            className="count-up-text text-3xl"
-          />
-        </div>
-      </div> */}
+            
         </div>
     );
 };
