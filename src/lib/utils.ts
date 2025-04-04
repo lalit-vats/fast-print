@@ -7,17 +7,17 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const serviceLink =[
-  {name: "Flex Print", href: "ho"},
-  {name: "T-Shirt Print", href: "contactus"},
-  {name: "Mug Print", href: "jjj"},
-  {name: "Vinayl Print", href: "aboutUs"},
+  {name: "Flex Print", href: "flexPrinting"},
+  {name: "T-Shirt Print", href: ""},
+  {name: "Mug Print", href: ""},
+  {name: "Vinayl Print", href: ""},
   ]
 
 export const navLinks =[
   {name: "Home", href: "/"},
   {name: "About Us", href: "aboutUs"},
-  {name: "Service", href: "/"},
-  {name: "Contact Us", href: "/"},
+  {name: "Service", href: ""},
+  {name: "Contact Us", href: "contactUs"},
 ]
 export type ServiceData = {
   img: unknown;

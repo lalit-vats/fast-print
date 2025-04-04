@@ -4,7 +4,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -12,6 +11,7 @@ import {
   Sheet,
   SheetContent,
   SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Logo from "../../public/Images/logo.png";
@@ -47,12 +47,12 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-3 transition-all duration-300 shadow-lg h-[60px] ${
-        isScrolled ? "bg-white/60 backdrop-blur-md" : "bg-white"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-3 transition-all duration-300 shadow-lg h-[60px] ${isScrolled ? "bg-white/60 backdrop-blur-md" : "bg-white"
+        }`}
     >
-      <Image src={Logo} alt="Logo" height={50} width={140} />
-
+      <Link href={"/"}>
+        <Image src={Logo} alt="Logo" height={50} width={140} />
+      </Link>
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center">
         <div className="p-2 font-medium flex">
@@ -70,17 +70,17 @@ const Header = () => {
                         Services
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <NavigationMenuLink className="w-[150px] flex flex-col p-2 space-y-2 font-medium">
-                          {serviceLink.map((link: ServiceProp) => (
+                        <div className="w-[150px] flex flex-col p-2 space-y-2 font-medium">
+                          {serviceLink.map((link: ServiceProp, i) => (
                             <Link
-                              key={link.name}
+                              key={i}
                               href={link.href}
                               className="p-0.5 text-[#EF4136] hover:text-gray-500"
                             >
                               {link.name}
                             </Link>
                           ))}
-                        </NavigationMenuLink>
+                        </div>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
                   </NavigationMenuList>
@@ -100,12 +100,17 @@ const Header = () => {
           <SheetTrigger>
             <Menu size={24} />
           </SheetTrigger>
-          <SheetContent className="pt-16"> {/* Added padding to prevent overlap */}
+          <SheetContent className=""> {/* Added padding to prevent overlap */}
             <SheetHeader>
+              <SheetTitle>
+                <Link href={"/"}>
+                  <Image src={Logo} alt="Logo" height={50} width={140} />
+                </Link>
+              </SheetTitle>
               <div className="p-2 font-medium flex flex-col">
-                {navLinks.map((link: NavProp) => (
+                {navLinks.map((link: NavProp, i) => (
                   <Link
-                    key={link.name}
+                    key={i}
                     href={link.href}
                     className="p-2 text-[#EF4136] hover:text-gray-500"
                   >
@@ -117,17 +122,17 @@ const Header = () => {
                               Services
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
-                              <NavigationMenuLink className="w-[150px] flex flex-col p-2 space-y-2 font-medium">
-                                {serviceLink.map((link: ServiceProp) => (
+                              <div className="w-[150px] flex flex-col p-2 space-y-2 font-medium">
+                                {serviceLink.map((link: ServiceProp, i) => (
                                   <Link
-                                    key={link.name}
+                                    key={i}
                                     href={link.href}
                                     className="p-0.5 text-[#EF4136] hover:text-gray-500"
                                   >
                                     {link.name}
                                   </Link>
                                 ))}
-                              </NavigationMenuLink>
+                              </div>
                             </NavigationMenuContent>
                           </NavigationMenuItem>
                         </NavigationMenuList>

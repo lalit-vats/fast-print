@@ -39,8 +39,8 @@ export const AnimatedTestimonials = ({
         }
     }, [autoplay]);
 
-    const randomRotateY = () => {
-        return Math.floor(Math.random() * 21) - 10;
+    const randomRotateY = (index: number) => {
+        return (index % 3) * 5 - 5;
     };
     return (
         <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
@@ -55,13 +55,13 @@ export const AnimatedTestimonials = ({
                                         opacity: 0,
                                         scale: 0.9,
                                         z: -100,
-                                        rotate: randomRotateY(),
+                                        rotate: randomRotateY(index),
                                     }}
                                     animate={{
                                         opacity: isActive(index) ? 1 : 0.7,
                                         scale: isActive(index) ? 1 : 0.95,
                                         z: isActive(index) ? 0 : -100,
-                                        rotate: isActive(index) ? 0 : randomRotateY(),
+                                        rotate: isActive(index) ? 0 : randomRotateY(index),
                                         zIndex: isActive(index)
                                             ? 40
                                             : testimonials.length + 2 - index,
@@ -71,7 +71,7 @@ export const AnimatedTestimonials = ({
                                         opacity: 0,
                                         scale: 0.9,
                                         z: 100,
-                                        rotate: randomRotateY(),
+                                        rotate: randomRotateY(index),
                                     }}
                                     transition={{
                                         duration: 0.4,
@@ -121,7 +121,7 @@ export const AnimatedTestimonials = ({
                         <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
                             {testimonials[active].quote.split(" ").map((word, index) => (
                                 <motion.span
-                                    key={index}
+                                    key={`${testimonials[active].name}-${word}-${index}`}
                                     initial={{
                                         filter: "blur(10px)",
                                         opacity: 0,

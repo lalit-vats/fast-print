@@ -43,9 +43,9 @@ const Hero = () => {
             <Image
               src={HeroImg}
               alt="Hero Graphic"
-              width={600} // Adjust width as needed
-              height={600} // Adjust height as needed
-              className="w-full max-w-md"
+              width={650} // Adjust width as needed
+              height={650} // Adjust height as needed
+              // className="w-full max-w-md"
             />
           </div>
         </div>
