@@ -1,23 +1,23 @@
+import React from 'react'
+import BgImage from "../../../public/Images/tshirtbg.jpg"
 import Image from 'next/image'
-import FlexPrintImg from "../../../public/Images/flexPrint.jpg"
-import Fp1 from "../../../public/Images/fp-1.png"
-import UpperImg from "../../../public/Images/ab3.jpg"
+import BigImage from "../../../public/Images/tshirtconpic.png"
+import SmallImage from "../../../public/Images/tshirtUpperPic.png"
 
-const Flexprinting = () => {
+const TshirtPrint = () => {
   return (
     <div className='mt-15'>
-      {/* Top Section */}
       <div className='relative'>
-        <Image src={FlexPrintImg} alt='aboutus' className='w-full h-1/2 object-cover ' />
-        <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>
-        </div>
-        <h1 className='w-full text-white absolute  z-10 top-1/3  text-center  text-6xl font-bold md:text-8xl'>Flex Printing</h1>
-      </div>
-      {/* Discription section */}
+                <Image src={BgImage} alt='aboutus' className='w-full h-full object-cover ' />
+                <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>
+                </div>
+                <h1 className='mb-1.5 w-full text-white absolute  z-10 top-1/3  text-center  text-6xl font-bold md:text-8xl'>T-Shirt Print</h1>
+            </div>
+             {/* Discription section */}
       <div className='container mx-auto md:px-40 grid grid-cols-1 md:grid-cols-2 p-4 md:py-6 gap-3.5'>
         <div className='relative'>
-          <Image src={Fp1} alt='image' className='rounded-xl' />
-          <Image src={UpperImg} alt='image' className='hidden md:block rounded-xl absolute z-20 -bottom-6 right-4 shadow-2xl' />
+          <Image src={BigImage} alt='image' className='rounded-xl' />
+          <Image src={SmallImage} alt='image' className='hidden md:block rounded-xl absolute z-20 -bottom-6 right-4 shadow-2xl' />
         </div>
         <div className='flex flex-col items-center justify-center'>
           <h1 className='text-4xl mt-2 md:text-6xl font-medium bg-gradient-to-r from-purple-600 via-pink-500 to-orange-700 text-transparent bg-clip-text'>We are just better Quality
@@ -37,4 +37,4 @@ const Flexprinting = () => {
   )
 }
 
-export default Flexprinting
+export default TshirtPrint

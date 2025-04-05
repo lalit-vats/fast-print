@@ -8,9 +8,9 @@ export function cn(...inputs: ClassValue[]) {
 
 export const serviceLink =[
   {name: "Flex Print", href: "flexPrinting"},
-  {name: "T-Shirt Print", href: ""},
-  {name: "Mug Print", href: ""},
-  {name: "Vinayl Print", href: ""},
+  {name: "T-Shirt Print", href: "tshirtPrint"},
+  // {name: "Mug Print", href: ""},
+  {name: "Vinayl Print", href: "vinaylPrint"},
   ]
 
 export const navLinks =[

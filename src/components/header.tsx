@@ -57,38 +57,38 @@ const Header = () => {
       <div className="hidden md:flex items-center">
         <div className="p-2 font-medium flex">
           {navLinks.map((link: NavProp) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="p-2 text-[#EF4136] hover:text-gray-500"
-            >
-              {link.name === "Service" ? (
-                <NavigationMenu>
-                  <NavigationMenuList>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger className="font-medium hover:text-gray-500">
-                        Services
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <div className="w-[150px] flex flex-col p-2 space-y-2 font-medium">
-                          {serviceLink.map((link: ServiceProp, i) => (
-                            <Link
-                              key={i}
-                              href={link.href}
-                              className="p-0.5 text-[#EF4136] hover:text-gray-500"
-                            >
-                              {link.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  </NavigationMenuList>
-                </NavigationMenu>
-              ) : (
-                link.name
-              )}
-            </Link>
+            link.name === "Service" ? (
+              <NavigationMenu key={link.name}>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="font-medium hover:text-gray-500">
+                      Services
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="w-[150px] flex flex-col p-2 space-y-2 font-medium">
+                        {serviceLink.map((link: ServiceProp, i) => (
+                          <Link
+                            key={i}
+                            href={link.href}
+                            className="p-0.5 text-[#EF4136] hover:text-gray-500"
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            ) : (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="p-2 text-[#EF4136] hover:text-gray-500"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </div>
         Call us: +91 1234567890
@@ -118,7 +118,7 @@ const Header = () => {
                       <NavigationMenu>
                         <NavigationMenuList>
                           <NavigationMenuItem>
-                            <NavigationMenuTrigger className="font-medium hover:text-gray-500">
+                            <NavigationMenuTrigger className="font-medium text-[#EF4136] hover:text-gray-500 ">
                               Services
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
