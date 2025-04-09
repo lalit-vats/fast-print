@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import ShinyText from '@/components/ui/shinyText';
 import FlexPrintImg from "../../../public/Images/flexPrint.jpg"
 import Fp1 from "../../../public/Images/fp-1.png"
 import UpperImg from "../../../public/Images/ab3.jpg"
@@ -11,7 +12,8 @@ const Flexprinting = () => {
         <Image src={FlexPrintImg} alt='aboutus' className='w-full h-1/2 object-cover ' />
         <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>
         </div>
-        <h1 className='w-full text-white absolute  z-10 top-1/3  text-center  text-6xl font-bold md:text-8xl'>Flex Printing</h1>
+        <ShinyText text="Flex Printing" disabled={false} speed={3} className='w-full text-gray-300 absolute z-10 top-1/3 text-center text-6xl font-bold md:text-8xl' />
+        
       </div>
       {/* Discription section */}
       <div className='container mx-auto md:px-40 grid grid-cols-1 md:grid-cols-2 p-4 md:py-6 gap-3.5'>

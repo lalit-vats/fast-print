@@ -2,14 +2,14 @@
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 
 type Testimonial = {
     quote: string;
     name: string;
     designation: string;
-    src: string;
+    src: StaticImageData;
 };
 export const AnimatedTestimonials = ({
     testimonials,

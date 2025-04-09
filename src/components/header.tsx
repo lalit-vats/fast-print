@@ -91,7 +91,18 @@ const Header = () => {
             )
           ))}
         </div>
-        Call us: +91 1234567890
+        <div className=" relative p-2">
+          <a className="cursor-pointer" href="tel:+91 9266822218">
+
+            <p className="font-bold text-[#EF4136]">Call us: <span className="text-[#EF4136]">+91 9266822218</span> </p>
+          </a>
+
+          <span className="absolute flex size-3 top-0 left-0">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#EF4136] opacity-75"></span>
+            <span className="relative inline-flex size-3 rounded-full bg-[#EF4136]"></span>
+          </span>
+        </div>
+
       </div>
 
       {/* Mobile Menu */}

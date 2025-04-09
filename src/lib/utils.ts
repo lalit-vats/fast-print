@@ -1,6 +1,11 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 import PrintIcon from "../../public/Images/printIcon.png"
+import { StaticImageData } from "next/image"
+import PrServiceOne from "../../public/Images/best.png"
+import PrSrviceTwo from "../../public/Images/ps2.png"
+import PrSrviceThree from "../../public/Images/ps3.png"
+import Stationery from "../../public/Images/stationery.png"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -19,8 +24,14 @@ export const navLinks =[
   {name: "Service", href: ""},
   {name: "Contact Us", href: "contactUs"},
 ]
+
 export type ServiceData = {
-  img: unknown;
+  img: StaticImageData;
+  title: string;
+  description: string;
+}
+export type AnimateServiceData = {
+  img: StaticImageData;
   title: string;
   description: string;
 }
@@ -81,3 +92,33 @@ export const testimonials = [
   },
 ];
 
+export const AnimateServices =[
+  {
+    sno:"1",
+    title:"Paper Print Services",
+    diccription:"For both personal and professional purposes, get top-notch paper printing services.  With brilliant colors and high-quality finishes, we provide flyers, brochures, business cards, posters, and more.  Quick turnaround and reasonable prices are assured!",
+    img:PrServiceOne
+
+  },
+  {
+    sno:"2",
+    title:"Flex Print Services",
+    diccription:"Get bright, high-quality flex printing for signs, banners, and posters.  Excellent for marketing, events, and ads.  Durable prints that won't fade in the sun at a good price!",
+    img:PrSrviceTwo
+
+  },
+  {
+    sno:"3",
+    title:"Office Stationery Print Services",
+    diccription:"Obtain premium office stationery printing for your company that features personalized designs.  We provide notepads, envelopes, letterheads, business cards, and more at reasonable costs.  Use high-quality printing services to project a more polished image!",
+    img:Stationery
+
+  },
+  {
+    sno:"4",
+    title:"Vinayl Print Services",
+    diccription:"Get high-quality vinyl printing for banners, stickers, and signage with vibrant colors and durable materials. Perfect for indoor and outdoor use, our prints are weather-resistant and long-lasting. Customize your design to make a bold statement for your brand or event!",
+    img:PrSrviceThree
+
+  },
+]
