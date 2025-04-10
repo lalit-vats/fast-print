@@ -14,8 +14,8 @@ const MapComponent = () => {
 
       const { Map } = await loader.importLibrary("maps");
       const locationInMap = {
-        lat: 28.4581652,
-        lng: 76.992062,
+        lat: 28.5530368,
+        lng: 77.1775422,
       };
 
       // Import Marker library

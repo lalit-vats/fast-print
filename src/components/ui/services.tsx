@@ -19,7 +19,7 @@ const Services = () => {
                                 className="bg-white transition-colors duration-500 
                               hover:bg-gradient-to-bl from-blue-200
                               via-yellow-50 to-pink-300 shadow-2xl,
-                              py-6 px-4 rounded-lg flex flex-col items-center min-h-[300px]"
+                              py-6 px-4 rounded-lg flex flex-col items-center min-h-[300px] gap-1.5"
                             >
                                 <Image
                                     src={data.img}
@@ -30,7 +30,7 @@ const Services = () => {
                                 <h3 className="text-2xl font-medium text-[#EF4136]">
                                     {data.title}
                                 </h3>
-                                <p className="text-center font-medium  text-gray-700">
+                                <p className=" font-medium text-justify  text-gray-700">
                                     {data.description}
                                 </p>
                             </div>
@@ -45,7 +45,7 @@ const Services = () => {
           <>
             <p className="text-[#EF4136] font-bold text-2xl">{d.sno}</p>
             <h2 className="text-2xl font-bold text-gray-700 text-center">{d.title}</h2>
-            <p className="text-center mb-5 text-wrap text-gray-600">{d.diccription}</p>
+            <p className="text-justify mb-5 text-wrap text-gray-600">{d.diccription}</p>
             <Image
               src={d.img}
               alt="service image"
@@ -65,7 +65,7 @@ const Services = () => {
             />
             <p className="text-[#EF4136] font-bold text-2xl">{d.sno}</p>
             <h2 className="text-2xl font-bold text-gray-700 text-center">{d.title}</h2>
-            <p className="text-center text-gray-600">{d.diccription}</p>
+            <p className="text-justify text-gray-600">{d.diccription}</p>
           </>
         )}
       </div>

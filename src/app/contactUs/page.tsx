@@ -233,9 +233,8 @@ const ContactUs = () => {
                     </div>
                     <div className="rounded-lg shadow-md p-4 mt-1">
                         <p className="mb-2 text-[#101828]">
-                            <strong>Address</strong> : Shop No. 14-D, Old, Huda Complex, Huda
-                            market, near sadar bazar, Prem Nagar, Roshan Pura, Gurugram,
-                            Haryana 122001
+                            <strong>Address</strong> : Plot No. 275, Munirka Village
+                           Near Gurudwara New Delhi 110067
                         </p>
                         <p className="mb-2 text-[#101828]">
                             <strong>Contact No</strong> :{" "}
@@ -245,7 +244,7 @@ const ContactUs = () => {
                             <strong>Email</strong> : fastprintdelhi@gmail.com
                         </p>
                         <p className="mb-2 text-[#101828]">
-                            <strong>Website</strong> : fast-print.in
+                            <strong>Website</strong> : fastprintdelhi.com
                         </p>
                     </div>
                 </div>
