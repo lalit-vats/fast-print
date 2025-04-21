@@ -31,6 +31,8 @@ interface NavProp {
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,13 +57,15 @@ const Header = () => {
       </Link>
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center">
-        <div className="p-2 font-medium flex">
+        <div className="p-2 font-medium flex gap-6">
           {navLinks.map((link: NavProp) => (
             link.name === "Service" ? (
-              <NavigationMenu key={link.name}>
+              <NavigationMenu key={link.name} onValueChange={(value) => setIsServicesOpen(!!value)}>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="font-medium hover:text-gray-500">
+                    <NavigationMenuTrigger 
+                      className={`font-medium hover:text-gray-500 ${isServicesOpen ? 'text-[#EF4136]' : 'text-[#393939]'}`}
+                    >
                       Services
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -70,7 +74,8 @@ const Header = () => {
                           <Link
                             key={i}
                             href={link.href}
-                            className="p-0.5 text-[#EF4136] hover:text-gray-500"
+                            className={`p-0.5 hover:text-gray-500 ${activeMenu === link.href ? 'text-[#EF4136]' : 'text-[#393939]'}`}
+                            onClick={() => setActiveMenu(link.href)}
                           >
                             {link.name}
                           </Link>
@@ -84,7 +89,8 @@ const Header = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="p-2 text-[#EF4136] hover:text-gray-500"
+                className={`p-2 hover:text-gray-500 ${activeMenu === link.href ? 'text-[#EF4136]' : 'text-[#393939]'}`}
+                onClick={() => setActiveMenu(link.href)}
               >
                 {link.name}
               </Link>
@@ -129,7 +135,7 @@ const Header = () => {
                       <NavigationMenu>
                         <NavigationMenuList>
                           <NavigationMenuItem>
-                            <NavigationMenuTrigger className="font-medium text-[#EF4136] hover:text-gray-500 ">
+                            <NavigationMenuTrigger className="font-medium text-[#393939] hover:text-gray-500 ">
                               Services
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
@@ -138,7 +144,7 @@ const Header = () => {
                                   <Link
                                     key={i}
                                     href={link.href}
-                                    className="p-0.5 text-[#EF4136] hover:text-gray-500"
+                                    className="p-0.5 text-[#393939] hover:text-gray-500"
                                   >
                                     {link.name}
                                   </Link>

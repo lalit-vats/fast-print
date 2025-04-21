@@ -18,7 +18,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div> */}
-      <div className='container mx-auto md:px-40 grid grid-cols-1 md:grid-cols-2 p-4 md:py-6'>
+      <div className='container mx-auto md:px-40 grid grid-cols-1 md:grid-cols-2 p-4 md:py-6 gap-3.5'>
         <div className='relative'>
         <Image src={FrontImg} alt='image' className='rounded-xl' />
         <Image src={UpperImg} alt='image' className='hidden md:block rounded-xl absolute z-20 -bottom-6 right-4 shadow-2xl' />
