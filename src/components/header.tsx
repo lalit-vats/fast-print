@@ -33,6 +33,12 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isServiceSelected, setIsServiceSelected] = useState(false);
+
+  useEffect(() => {
+    // Set initial active menu based on current path
+    setActiveMenu(window.location.pathname);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,6 +52,12 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    // Check if any service link is active
+    const isAnyServiceActive = serviceLink.some(link => link.href === activeMenu);
+    setIsServiceSelected(isAnyServiceActive);
+  }, [activeMenu]);
 
   return (
     <div
@@ -64,7 +76,7 @@ const Header = () => {
                 <NavigationMenuList>
                   <NavigationMenuItem>
                     <NavigationMenuTrigger 
-                      className={`font-medium hover:text-gray-500 ${isServicesOpen ? 'text-[#EF4136]' : 'text-[#393939]'}`}
+                      className={`font-medium hover:text-gray-500 ${isServicesOpen || isServiceSelected ? 'text-[#EF4136]' : 'text-[#393939]'}`}
                     >
                       Services
                     </NavigationMenuTrigger>
