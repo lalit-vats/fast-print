@@ -22,7 +22,7 @@ const TshirtPrint = () => {
         <div className='flex flex-col items-center justify-center'>
           <h1 className='text-4xl mt-2 md:text-6xl font-medium bg-gradient-to-r from-purple-600 via-pink-500 to-orange-700 text-transparent bg-clip-text'>Our quality has been superior for more than 12 years.
           </h1>
-          <p className=' mt-6 font-medium text-[20px] text-gray-700 '>With over 12 years of experience, we&apos;re a trusted name in delivering premium-quality &apos;T-shirt&apos; printing services that bring your ideas to life.
+          <p className=' mt-6 font-medium text-[20px] text-gray-700 text-justify'>With over 12 years of experience, we&apos;re a trusted name in delivering premium-quality &apos;T-shirt&apos; printing services that bring your ideas to life.
           </p>
           <p className=' mt-6 font-medium text-[20px] text-gray-700 '>
 

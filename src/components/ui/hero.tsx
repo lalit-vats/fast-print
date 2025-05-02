@@ -3,7 +3,7 @@ import Image from "next/image";
 // import Link from "next/link";
 import HeroImg from "../../../public/Images/ab1 1.png";
 import RotatingText from "../RotatingText";
- const texts = ["T-shirt", "Caps", "Flex", "Vinyal"]
+ const texts = ["T-shirt", "Caps", "Flex", "Vinyl"]
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center ">

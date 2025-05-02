@@ -17,7 +17,7 @@ const HordingPrint = () => {
                     <Image src={BigImage} alt='image' className='rounded-xl animate__fadeInDown' />
                     <Image src={SmallImage} alt='image' className='hidden md:block rounded-xl absolute z-20 -bottom-6 right-4 shadow-2xl' />
                 </div>
-                <div className='flex flex-col items-center justify-center'>
+                <div className='flex flex-col '>
                     <h1 className='text-4xl mt-2 md:text-6xl font-medium bg-gradient-to-r from-purple-600 via-pink-500 to-orange-700 text-transparent bg-clip-text '> Your Business Deserves Flawless Prints – We Deliver!
                     </h1>
                     <p className=' mt-6 font-medium text-[20px] text-gray-700 text-justify'>With years of experience we can see your vision through powerful Hoarding Prints that are impossible to miss. Whether you are advertising outdoors or want signage for any event, we have expertise in tailor made, weather tough hoardings ideal for branding, promotions and properties.

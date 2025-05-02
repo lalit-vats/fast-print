@@ -29,7 +29,7 @@ const WhatWeDo = () => {
               <h1 className='text-4xl mt-2 md:text-6xl font-medium bg-gradient-to-r from-purple-600 via-pink-500 to-orange-700 text-transparent bg-clip-text'>High-Quality Custom Printing for Every Purpose</h1>
          
               <p className=' mt-6 font-medium text-[20px] text-gray-700 text-justify '>
-                Whether you need mind-blowing banners, amazing signs, memorable custom t-shirts and apparel or eye-catching promotional products, RESTEK has you covered. We also focus on office stationery printing – you&apos;ll find everything from letterheads and business cards (and everything in between) to printed envelopes and notepads – and you can always be confident that your business identity looks completely professional in every respect. Be it for promotions and events or altogether branding, we have the right means and experience to produce impressive results.
+                Whether you need mind-blowing banners, amazing signs, memorable custom t-shirts and apparel or eye-catching promotional products, We also focus on office stationery printing – you&apos;ll find everything from letterheads and business cards (and everything in between) to printed envelopes and notepads – and you can always be confident that your business identity looks completely professional in every respect. Be it for promotions and events or altogether branding, we have the right means and experience to produce impressive results.
               </p>
             </div>
           </div>

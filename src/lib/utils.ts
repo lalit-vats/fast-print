@@ -17,9 +17,10 @@ export const serviceLink = [
   { name: "Flex Print", href: "/flexPrinting" },
   { name: "T-Shirt Print", href: "/tshirtPrint" },
   { name: "Mug Print", href: "/mugPrint" },
-  { name: "Vinayl Print", href: "/vinaylPrint" },
+  { name: "Vinyl Print", href: "/vinylPrint" },
   { name: "Hording-Banner Print", href: "/hordingPrint" },
   { name: "Broucre Print", href: "/broucrePrint" },
+  { name: "Standee Print", href: "/standeePrint" },
 ];
 
 export const navLinks = [
