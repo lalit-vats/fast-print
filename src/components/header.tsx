@@ -71,7 +71,7 @@ const Header = () => {
               <NavigationMenu key={link.name} onValueChange={(value) => setIsServicesOpen(!!value)}>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger 
+                    <NavigationMenuTrigger
                       className={`font-medium hover:text-gray-500 ${isServicesOpen || isServiceSelected ? 'text-[#EF4136]' : 'text-[#393939]'}`}
                     >
                       Services
