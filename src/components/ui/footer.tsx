@@ -1,10 +1,21 @@
+"use client"
+
 import Image from 'next/image'
 import Logo from '../../../public/Images/logo.png'
 import Link from 'next/link'
 import { navLinks, serviceLink } from "@/lib/utils";
 import { FacebookIcon, Instagram } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setActiveMenu(pathname);
+  }, [pathname]);
+
   return (
     <div className='bg-gray-100 text-white py-5 px-10 mt-10'>
 
@@ -21,7 +32,12 @@ const Footer = () => {
           <ul className='text-gray-900 font-semibold flex flex-col gap-2'>
             {navLinks.map((link) => (
               <li key={link.name} className='hover:text-gray-500 text-[18px]'>
-                <Link href={link.href}>{link.name}</Link>
+                <Link 
+                  href={link.href}
+                  className={`${activeMenu === link.href ? 'text-[#EF4136]' : 'text-gray-900'}`}
+                >
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -32,7 +48,12 @@ const Footer = () => {
           <ul className='text-gray-900 font-semibold flex flex-col gap-2'>
             {serviceLink.map((link) => (
               <li key={link.name} className='hover:text-gray-500 text-[18px]'>
-                <Link href={link.href}>{link.name}</Link>
+                <Link 
+                  href={link.href}
+                  className={`${activeMenu === link.href ? 'text-[#EF4136]' : 'text-gray-900'}`}
+                >
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>

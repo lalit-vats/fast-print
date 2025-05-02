@@ -19,6 +19,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { navLinks, serviceLink } from "@/lib/utils";
 import { Menu } from "lucide-react";
+import { usePathname } from 'next/navigation';
 
 interface ServiceProp {
   name: string;
@@ -31,14 +32,9 @@ interface NavProp {
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isServiceSelected, setIsServiceSelected] = useState(false);
-
-  useEffect(() => {
-    // Set initial active menu based on current path
-    setActiveMenu(window.location.pathname);
-  }, []);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,9 +51,9 @@ const Header = () => {
 
   useEffect(() => {
     // Check if any service link is active
-    const isAnyServiceActive = serviceLink.some(link => link.href === activeMenu);
+    const isAnyServiceActive = serviceLink.some(link => link.href === pathname);
     setIsServiceSelected(isAnyServiceActive);
-  }, [activeMenu]);
+  }, [pathname]);
 
   return (
     <div
@@ -75,7 +71,7 @@ const Header = () => {
               <NavigationMenu key={link.name} onValueChange={(value) => setIsServicesOpen(!!value)}>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger 
+                    <NavigationMenuTrigger
                       className={`font-medium hover:text-gray-500 ${isServicesOpen || isServiceSelected ? 'text-[#EF4136]' : 'text-[#393939]'}`}
                     >
                       Services
@@ -86,8 +82,7 @@ const Header = () => {
                           <Link
                             key={i}
                             href={link.href}
-                            className={`p-0.5 hover:text-gray-500 ${activeMenu === link.href ? 'text-[#EF4136]' : 'text-[#393939]'}`}
-                            onClick={() => setActiveMenu(link.href)}
+                            className={`p-0.5 hover:text-gray-500 ${pathname === link.href ? 'text-[#EF4136]' : 'text-[#393939]'}`}
                           >
                             {link.name}
                           </Link>
@@ -101,8 +96,7 @@ const Header = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`p-2 hover:text-gray-500 ${activeMenu === link.href ? 'text-[#EF4136]' : 'text-[#393939]'}`}
-                onClick={() => setActiveMenu(link.href)}
+                className={`p-2 hover:text-gray-500 ${pathname === link.href ? 'text-[#EF4136]' : 'text-[#393939]'}`}
               >
                 {link.name}
               </Link>
@@ -138,27 +132,23 @@ const Header = () => {
               </SheetTitle>
               <div className="p-2 font-medium flex flex-col">
                 {navLinks.map((link: NavProp, i) => (
-                  <Link
-                    key={i}
-                    href={link.href}
-                    className="p-2 text-[#EF4136] hover:text-gray-500"
-                  >
-                    {link.name === "Service" ? (
+                  link.name === "Service" ? (
+                    <div key={i} className="p-2">
                       <NavigationMenu>
                         <NavigationMenuList>
                           <NavigationMenuItem>
-                            <NavigationMenuTrigger className="font-medium text-[#393939] hover:text-gray-500 ">
+                            <NavigationMenuTrigger className="font-medium text-[#393939] hover:text-gray-500">
                               Services
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
                               <div className="w-[150px] flex flex-col p-2 space-y-2 font-medium">
-                                {serviceLink.map((link: ServiceProp, i) => (
+                                {serviceLink.map((service: ServiceProp, j) => (
                                   <Link
-                                    key={i}
-                                    href={link.href}
-                                    className="p-0.5 text-[#393939] hover:text-gray-500"
+                                    key={j}
+                                    href={service.href}
+                                    className={`p-0.5 ${pathname === service.href ? 'text-[#EF4136]' : 'text-[#393939]'} hover:text-gray-500`}
                                   >
-                                    {link.name}
+                                    {service.name}
                                   </Link>
                                 ))}
                               </div>
@@ -166,10 +156,16 @@ const Header = () => {
                           </NavigationMenuItem>
                         </NavigationMenuList>
                       </NavigationMenu>
-                    ) : (
-                      link.name
-                    )}
-                  </Link>
+                    </div>
+                  ) : (
+                    <Link
+                      key={i}
+                      href={link.href}
+                      className={`p-2 ${pathname === link.href ? 'text-[#EF4136]' : 'text-[#393939]'} hover:text-gray-500`}
+                    >
+                      {link.name}
+                    </Link>
+                  )
                 ))}
               </div>
             </SheetHeader>
