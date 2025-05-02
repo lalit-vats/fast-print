@@ -12,16 +12,19 @@ const countUpData = [
   {
     icon: <Users height={40} width={40} color="#EF4136" />,
     count: 100,
+    suffix: "+",
     title: "Happy Clients",
   },
   {
     icon: <Presentation height={40} width={40} color="#EF4136" />,
     count: 250,
+    suffix: "+",
     title: "Projects Completed",
   },
   {
     icon: <BadgeCheck height={40} width={40} color="#EF4136" />,
     count: 12,
+    suffix: "+",
     title: "Years of Experience",
   },
 ];
@@ -57,14 +60,17 @@ export default function Home() {
                 <div className="transform transition-transform duration-300 hover:rotate-45">
                   {d.icon}
                 </div>
-                <CountUp
-                  from={0}
-                  to={d.count}
-                  separator=","
-                  direction="up"
-                  duration={1}
-                  className="count-up-text text-4xl font-bold text-[#EF4136]"
-                />
+                <div className="flex items-center">
+                  <CountUp
+                    from={0}
+                    to={d.count}
+                    separator=","
+                    direction="up"
+                    duration={1}
+                    className="count-up-text text-4xl font-bold text-[#EF4136]"
+                  />
+                  {d.suffix && <span className="text-4xl font-bold text-[#EF4136]">{d.suffix}</span>}
+                </div>
               </div>
               <h1 className=" text-3xl font-bold m-1 text-[#EF4136]">
                 {d.title}
