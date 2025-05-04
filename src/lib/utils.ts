@@ -21,6 +21,7 @@ export const serviceLink = [
   { name: "Hording-Banner Print", href: "/hordingPrint" },
   { name: "Broucre Print", href: "/broucrePrint" },
   { name: "Standee Print", href: "/standeePrint" },
+  { name: "Canopy", href: "/canopy" },
 ];
 
 export const navLinks = [
