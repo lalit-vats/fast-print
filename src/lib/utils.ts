@@ -22,6 +22,8 @@ export const serviceLink = [
   { name: "Broucre Print", href: "/broucrePrint" },
   { name: "Standee Print", href: "/standeePrint" },
   { name: "Canopy", href: "/canopy" },
+  { name: "Pamphlet Print", href: "/pamphletPrint" },
+  { name: "Letterhead Print", href: "/letterheadPrint" },
 ];
 
 export const navLinks = [
