@@ -5,6 +5,9 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/ui/footer";
 import Script from "next/script";
+import WhatsappIcon from "@/components/whatsAppIcon";
+import FacebookIcon from "@/components/facebookIcon";
+import InstaIcon from "@/components/instagramIcon";
 
 
 
@@ -39,10 +42,15 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className="poppins.variable"
+        className="poppins.variable relative overflow-x-hidden"
       >
         <Header />
         {children}
+        <div className="absolute bottom-5 right-5 z-50">
+          <FacebookIcon/>
+          <InstaIcon/>
+          <WhatsappIcon/>
+        </div>
         <Footer />
       </body>
     </html>
