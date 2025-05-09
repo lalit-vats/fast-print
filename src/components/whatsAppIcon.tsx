@@ -1,22 +1,15 @@
-import Image from "next/image";
-import WhatsappImage from "../../public/Images/WhatsAppIcon.png";
+import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsappIcon = () => {
   return (
-    <div className="fixed bottom-5 right-5 z-50">
+    <div className="fixed bottom-5 right-4 z-50 mb-1">
       <a 
-        href="https://api.whatsapp.com/send?phone=7303387506" 
+        href="https://api.whatsapp.com/send?phone=9266822218" 
         target="_blank"
         rel="noopener noreferrer"
-        className="block hover:scale-110 transition-transform duration-200"
+        className="block hover:scale-130 transition-transform duration-200"
       >
-        <Image 
-          src={WhatsappImage} 
-          width={48} 
-          height={48} 
-          alt="WhatsApp Contact" 
-          className="w-auto h-auto"
-        />
+        <FaWhatsapp size={26}/>
       </a>
     </div>
   );

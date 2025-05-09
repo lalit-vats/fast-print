@@ -118,7 +118,8 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className="md:hidden ">
+      <div className="md:hidden  flex items-center gap-2">
+        {/* <h2>Hello</h2> */}
         <Sheet>
           <SheetTrigger>
             <Menu size={24} />
