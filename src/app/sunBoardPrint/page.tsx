@@ -1,7 +1,7 @@
 import React from 'react'
-import BgImage from "../../../public/Images/broucrePrint.jpg"
-import SmallImage from "../../../public/Images/visitingCardImgTwo.jpg"
-import BigImage from "../../../public/Images/visitingCardImg.jpg"
+import BgImage from "../../../public/Images/sunboardCutoutBg.jpg"
+import SmallImage from "../../../public/Images/sunboardCutoutImgTwo.jpg"
+import BigImage from "../../../public/Images/vinaylBigImage.png"
 import Image from 'next/image'
 
 const VinaylPrint
@@ -21,17 +21,16 @@ const VinaylPrint
             <Image src={SmallImage} alt='image' className='hidden md:block rounded-xl absolute z-20 -bottom-6 right-4 shadow-2xl' />
           </div>
           <div className='flex flex-col items-center justify-center'>
-            <h1 className='text-4xl mt-2 md:text-6xl font-medium bg-gradient-to-r from-purple-600 via-pink-500 to-orange-700 text-transparent bg-clip-text'>Premium Quality Visiting Cards at Affordable Prices</h1>
-            <p className=' mt-6 font-medium text-[20px] text-gray-700 '>Trusted by Professionals for Over a Decade
-            Our premium visiting card prints reflect quality, precision, and style.
+            <h1 className='text-4xl mt-2 md:text-6xl font-medium bg-gradient-to-r from-purple-600 via-pink-500 to-orange-700 text-transparent bg-clip-text'>Increase Your Brand Awareness with Superior Sunboard Printed designs.</h1>
+            <p className=' mt-6 font-medium text-[20px] text-gray-700 '>Searching for a long-lasting, polished, and eye-catching method to present your message or brand? The ideal answer is our sunboard printing services.
             </p>
             <p className=' mt-6 font-medium text-[20px] text-gray-700 '>
 
-              ✅ Premium Finish: Select from matte, glossy or textured finish options to give a professional look.<br />
-              ✅ Premium Cardstock: Durable, strong material with fantastic quality, has a good feel to it.<br />
-              ✅ Custom Designs: Visit cards tailor made to fit your brand and style.<br />
-              ✅ Vibrant & Sharp Prints: Clear Text is what we want, and that&apos;s exactly what we will get with these cards.<br />
-              ✅ Many Size Options: Standard, square, folded, and custom—just the way you need it.
+              ✅ Panels for Retail Branding
+              Professionally designed sunboard panels that draw attention and support your brand image can help your store stand out.<br />
+              ✅ Promotional Standees Use portable, lightweight, custom-designed sunboard standees to highlight sales, debuts, or events.<br />
+              ✅ Interior Signage for Businesses
+              High-resolution printed sunboards that showcase your company&apos;s identity will give your workplace or showroom a clean, contemporary appearance.<br />
               </p>
           </div>
         </div>

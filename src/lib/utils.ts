@@ -27,6 +27,9 @@ export const serviceLink = [
   { name: "Diary Print", href: "/diaryPrint" },
   { name: "Visiting Cards Print", href: "/visitingCard" },
   { name: "Sun Board / Foam Board Prints", href: "/sunBoardPrint" },
+  { name: "Calender Print", href: "/calenderPrint" },
+  { name: "Folder Print", href: "/folderPrint" },
+
 ];
 
 export const navLinks = [

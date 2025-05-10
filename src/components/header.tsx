@@ -20,6 +20,7 @@ import Link from "next/link";
 import { navLinks, serviceLink } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import { usePathname } from 'next/navigation';
+import { IoMdCall } from "react-icons/io";
 
 interface ServiceProp {
   name: string;
@@ -118,8 +119,12 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className="md:hidden  flex items-center gap-2">
-        {/* <h2>Hello</h2> */}
+      <div className="md:hidden  flex items-center gap-5">
+        <div className="md:hidden">
+          <a className="cursor-pointer" href="tel:+91 9266822218" >
+            <IoMdCall size={24} />
+          </a>
+        </div>
         <Sheet>
           <SheetTrigger>
             <Menu size={24} />
