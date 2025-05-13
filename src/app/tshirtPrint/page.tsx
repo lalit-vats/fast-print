@@ -3,6 +3,12 @@ import BgImage from "../../../public/Images/tshirtbg.jpg"
 import Image from 'next/image'
 import BigImage from "../../../public/Images/tshirtconpic.png"
 import SmallImage from "../../../public/Images/tshirtUpperPic.png"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "T-Shirt Print",
+  description: "Whether you're showcasing your products, services, or brand story, we provide high-quality t-shirt prints that stand out.",
+}
 
 const TshirtPrint = () => {
   return (

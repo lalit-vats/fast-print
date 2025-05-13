@@ -2,6 +2,13 @@ import Image from 'next/image'
 import BgImage from "../../../public/Images/standeeprintBg.jpg"
 import BigImage from "../../../public/Images/standyImg.jpg"
 import SmallImage from "../../../public/Images/standyPrint.jpg"
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: "Standee Print",
+  description: "Whether you're showcasing your products, services, or brand story, we offer high-quality standee prints that leave an impression.",
+}
 
 const Standy = () => {
     return (

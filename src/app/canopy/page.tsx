@@ -2,6 +2,13 @@ import Image from 'next/image'
 import BgImage from "../../../public/Images/canopyBg.jpg"
 import BigImage from "../../../public/Images/canopyImg.jpg"
 import SmallImage from "../../../public/Images/canopyImgTwo.jpg"
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: "Canopy",
+  description: "Whether you're showcasing your products, services, or brand story, we offer high-quality canopy prints that stand out.",
+}
 
 const Canopy = () => {
     return (

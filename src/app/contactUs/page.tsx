@@ -7,7 +7,6 @@ import { useRef } from 'react'
 import Swal from 'sweetalert2'
 import aboutus from '../../../public/Images/aboutUsBg.jpg'
 
-
 const ContactUs = () => {
 
 

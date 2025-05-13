@@ -3,6 +3,12 @@ import BgImage from "../../../public/Images/broucrePrint.jpg"
 import SmallImage from "../../../public/Images/visitingCardImgTwo.jpg"
 import BigImage from "../../../public/Images/visitingCardImg.jpg"
 import Image from 'next/image'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Visiting Cards Print",
+  description: "Whether you're showcasing your products, services, or brand story, we provide high-quality visiting cards prints that stand out.",
+}
 
 const VinaylPrint
   = () => {

@@ -2,6 +2,13 @@ import Image from 'next/image'
 import BgImage from "../../../public/Images/mugPrintingBg.jpg"
 import BigImage from "../../../public/Images/mugPrintBigImage.jpg"
 import SmallImage from "../../../public/Images/mugSmallPic.png"
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: "Mug Print",
+  description: "Whether you're showcasing your products, services, or brand story, we provide high-quality mug prints that leave an impression.",
+}
 
 const MugPrinting = () => {
     return (

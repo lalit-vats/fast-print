@@ -3,8 +3,15 @@ import BgImage from "../../../public/Images/sunboardCutoutBg.jpg"
 import SmallImage from "../../../public/Images/sunboardCutoutImgTwo.jpg"
 import BigImage from "../../../public/Images/vinaylBigImage.png"
 import Image from 'next/image'
+import { Metadata } from 'next'
 
-const VinaylPrint
+
+export const metadata: Metadata = {
+  title: "Sunboard Print",
+  description: "Whether you're showcasing your products, services, or brand story, we provide high-quality sunboard prints that stand out.",
+}
+
+const SunboardPrint
   = () => {
     return (
       <div className='mt-15'>
@@ -38,5 +45,5 @@ const VinaylPrint
     )
   }
 
-export default VinaylPrint
+export default SunboardPrint
 

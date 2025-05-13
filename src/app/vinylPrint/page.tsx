@@ -3,6 +3,12 @@ import BgImage from "../../../public/Images/vinaylPrint.png"
 import SmallImage from "../../../public/Images/vinaylUpperPic.png"
 import BigImage from "../../../public/Images/vinaylBigImage.png"
 import Image from 'next/image'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Vinayl Print",
+  description: "Whether you're showcasing your products, services, or brand story, we provide high-quality vinyl prints that stand out.",
+}
 
 const VinaylPrint
   = () => {

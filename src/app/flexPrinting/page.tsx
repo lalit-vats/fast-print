@@ -3,6 +3,12 @@ import ShinyText from '@/components/ui/shinyText';
 import FlexPrintImg from "../../../public/Images/flexPrint.jpg"
 import Fp1 from "../../../public/Images/fp-1.png"
 import UpperImg from "../../../public/Images/ab3.jpg"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Flex Printing",
+  description: "Whether you are showcasing your products, services, or brand story, we offer high-quality flex printing that leaves an impression.",
+}
 
 const Flexprinting = () => {
   return (

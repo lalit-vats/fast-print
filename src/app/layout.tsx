@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
-// import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/ui/footer";
@@ -10,17 +8,43 @@ import FacebookIcon from "@/components/facebookIcon";
 import InstaIcon from "@/components/instagramIcon";
 
 
-
-// const poppins = Poppins({
-//   subsets: ["latin"],
-//   weight: ["300", "400", "700"], // Choose font weights
-//   variable: "--font-poppins", // Add CSS variable
-// });
-
 export const metadata: Metadata = {
-  title: "Fast Print",
+  title: {
+    default: "Fast Print",
+    template: "%s | Fast Print",
+  },
   description: "We Provide Best Print Services",
+  keywords: [
+    "printing shop",
+    "flex printing",
+    "printing services",
+    "digital printing",
+    "mug printing",
+    "custom t-shirt print",
+    "banner printing",
+    "Fast Print Delhi"
+  ],
+  openGraph: {
+    title: "Fast Print",
+    description: "We Provide Best Print Services",
+    url: "https://fastprintdelhi.com",
+    siteName: "Fast Print",
+    images: [
+      {
+        url: "https://fastprintdelhi.com/public/Images/logo.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  facebook: {
+    appId: "1234567890",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -47,9 +71,9 @@ export default function RootLayout({
         <Header />
         {children}
         <div className="absolute bottom-5 right-5 z-50">
-          <FacebookIcon/>
-          <InstaIcon/>
-          <WhatsappIcon/>
+          <FacebookIcon />
+          <InstaIcon />
+          <WhatsappIcon />
         </div>
         <Footer />
       </body>

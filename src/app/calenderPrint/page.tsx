@@ -3,6 +3,13 @@ import BgImage from "../../../public/Images/calenderPrintBg.jpg"
 import SmallImage from "../../../public/Images/calendePrintTwo.jpg"
 import BigImage from "../../../public/Images/calenderBigImage.jpg"
 import Image from 'next/image'
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: "Calender Print",
+  description: "Whether you're showcasing your products, services, or brand story, we offer high-quality calendar prints that leave an impression.",
+}
 
 const CalenderPrint
   = () => {

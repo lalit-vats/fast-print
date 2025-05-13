@@ -2,6 +2,15 @@ import Image from 'next/image'
 import aboutus from '../../../public/Images/aboutUsBg.jpg'
 import FrontImg from "../../../public/Images/ab1.jpg"
 import UpperImg from "../../../public/Images/ab3.jpg"
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "We are a team of dedicated professionals who are passionate about providing the best print services to our clients.",
+}
+
+
 const AboutUs = () => {
   return (
     <div className=' mt-15'>

@@ -2,6 +2,13 @@ import Image from 'next/image'
 import BgImage from "../../../public/Images/broucrePrint.jpg"
 import BigImage from "../../../public/Images/broucrePrintOne.jpg"
 import SmallImage from "../../../public/Images/brourceUpperPic.jpg"
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: "Broucre Print",
+  description: "Whether you're showcasing your products, services, or brand story, we offer high-quality brochure prints that leave an impression.",
+}
 
 const BroucrePrint = () => {
     return (

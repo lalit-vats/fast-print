@@ -2,6 +2,12 @@ import Image from 'next/image'
 import BgImage from "../../../public/Images/hordingDesign.jpg"
 import BigImage from "../../../public/Images/bannerPrint.jpg"
 import SmallImage from "../../../public/Images/bannerUpperPic.jpg"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Hording Print",
+  description: "Whether you're showcasing your products, services, or brand story, we provide high-quality hording prints that leave an impression.",
+}
 
 const HordingPrint = () => {
     return (

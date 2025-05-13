@@ -3,6 +3,14 @@ import BgImage from "../../../public/Images/calenderPrintBg.jpg"
 import SmallImage from "../../../public/Images/folderPrintTwo.jpg"
 import BigImage from "../../../public/Images/folderBigImage.jpg"
 import Image from 'next/image'
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: "Folder Print",
+  description: "We provide high-quality folder prints that stand out whether you're showcasing your products, services, or brand story.",
+}
+
 
 const FolderPrint
   = () => {

@@ -2,6 +2,13 @@ import Image from 'next/image'
 import BgImage from "../../../public/Images/letterheadBg.jpg"
 import BigImage from "../../../public/Images/letterHeadImg.jpg"
 import SmallImage from "../../../public/Images/letterHeadtmgTwo.jpg"
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: "Letterhead Print",
+  description: "Whether you're showcasing your products, services, or brand story, we provide high-quality letterhead printing that stand out.",
+}
 
 const LetterheadPrint = () => {
     return (

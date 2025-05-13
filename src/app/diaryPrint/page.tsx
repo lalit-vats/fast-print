@@ -2,6 +2,13 @@ import Image from 'next/image'
 import BgImage from "../../../public/Images/pumplateBg.jpg"
 import BigImage from "../../../public/Images/diarymg.jpg"
 import SmallImage from "../../../public/Images/diaryImgTwo.jpg"
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: "Diary Print",
+  description: "Whether you're showcasing your products, services, or brand story, we offer high-quality diary prints that stand out.",
+}
 
 const DiaryPrint = () => {
     return (

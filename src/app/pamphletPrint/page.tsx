@@ -2,6 +2,12 @@ import Image from 'next/image'
 import BgImage from "../../../public/Images/pumplateBg.jpg"
 import BigImage from "../../../public/Images/papheletImg.jpg"
 import SmallImage from "../../../public/Images/pemphaleItmgTwo.jpg"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Pamphlet Print",
+  description: "Whether you're showcasing your products, services, or brand story, we provide high-quality pamphlet printing that stand out.",
+}
 
 const PamphletPrint = () => {
     return (
