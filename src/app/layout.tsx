@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     "Fast Print Delhi"
   ],
   openGraph: {
-    title: "Fast Print",
+    title: "Fastprint",
     description: "We Provide Best Print Services",
     url: "https://fastprintdelhi.com",
-    siteName: "Fast Print",
+    siteName: "Fastprint",
     images: [
       {
         url: "https://fastprintdelhi.com/public/Images/logo.png",

@@ -8,6 +8,15 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "T-Shirt Print",
   description: "Whether you're showcasing your products, services, or brand story, we provide high-quality t-shirt prints that stand out.",
+  keywords: [
+    "Fast Print T-Shirt Print",
+    "T-Shirt Printing",
+    "T-Shirt Print in Delhi",
+    "T-Shirt Printing  near me",
+    "T-Shirt Printing in Munirka",
+    "T-Shirt Printing in Mahipalpur",
+    "T-Shirt Print in Gurgaon",
+  ],
 }
 
 const TshirtPrint = () => {

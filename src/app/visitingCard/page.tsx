@@ -8,6 +8,19 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "Visiting Cards Print",
   description: "Whether you're showcasing your products, services, or brand story, we provide high-quality visiting cards prints that stand out.",
+  keywords: [
+    "Fast Print visiting cards",
+    "Urgent visiting card printing near me",
+    "visiting card printing",
+    "business card print",
+    "custom visiting cards",
+    "premium visiting cards",
+    "matte finish cards",
+    "Delhi print shop",
+    "Visiting Card in Munirka",
+    "Visiting Card in Gurgaon",
+    "Visiting Card Printing in Delhi",
+  ],
 }
 
 const VinaylPrint
@@ -29,7 +42,7 @@ const VinaylPrint
           <div className='flex flex-col items-center justify-center'>
             <h1 className='text-4xl mt-2 md:text-6xl font-medium bg-gradient-to-r from-purple-600 via-pink-500 to-orange-700 text-transparent bg-clip-text'>Premium Quality Visiting Cards at Affordable Prices</h1>
             <p className=' mt-6 font-medium text-[20px] text-gray-700 '>Trusted by Professionals for Over a Decade
-            Our premium visiting card prints reflect quality, precision, and style.
+              Our premium visiting card prints reflect quality, precision, and style.
             </p>
             <p className=' mt-6 font-medium text-[20px] text-gray-700 '>
 
@@ -38,7 +51,7 @@ const VinaylPrint
               ✅ Custom Designs: Visit cards tailor made to fit your brand and style.<br />
               ✅ Vibrant & Sharp Prints: Clear Text is what we want, and that&apos;s exactly what we will get with these cards.<br />
               ✅ Many Size Options: Standard, square, folded, and custom—just the way you need it.
-              </p>
+            </p>
           </div>
         </div>
       </div>

@@ -8,6 +8,15 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "Vinayl Print",
   description: "Whether you're showcasing your products, services, or brand story, we provide high-quality vinyl prints that stand out.",
+  keywords: [
+    "Delhi print shop",
+    "Vinyl Printing near me",
+    "Vinyl Printing in Delhi",
+    "Custom Vinyl Stickers in Delhi",
+    "Vinyl Printing in Gurgaon",
+    "Vinyl Printing in Noida",
+    "Fast Print visiting cards"
+  ],
 }
 
 const VinaylPrint

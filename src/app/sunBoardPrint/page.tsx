@@ -9,6 +9,14 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "Sunboard Print",
   description: "Whether you're showcasing your products, services, or brand story, we provide high-quality sunboard prints that stand out.",
+  keywords: [
+    "sunboard / flyer / ribbons / stickers",
+    "Vinyl Sunboard Printing",
+    "Sunboard Printing near me",
+    "Sunboard Printing in Munirka",
+    "Sunboard Print in Delhi",
+    "Sunboard Printing in Gurgaon",
+  ],
 }
 
 const SunboardPrint

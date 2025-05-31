@@ -6,10 +6,16 @@ import { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: "Letterhead Print",
-  description: "Whether you're showcasing your products, services, or brand story, we provide high-quality letterhead printing that stand out.",
+    title: "Letterhead Print",
+    description: "Whether you're showcasing your products, services, or brand story, we provide high-quality letterhead printing that stand out.",
+    keywords: [
+        "Fast Print Letterhead Print",
+        "Letterhead Printing near me",
+        "Letterhead Print in Munirka",
+        "Letterhead Print in Delhi",
+        "Letterhead Printing in Gurgaon",
+    ],
 }
-
 const LetterheadPrint = () => {
     return (
         <div className='mt-15'>
@@ -32,8 +38,8 @@ const LetterheadPrint = () => {
 
                     </p>
                     <p className=' mt-6 font-medium text-[20px] text-gray-700  text-justify'>
-                        
-                        ✔️ Customized Designs with Your Logo & Brand Colors<br />✔️ Choose Between 100 GSM, 120 GSM Or Premium Textured Paper<br /> ✔️ High Definition, High Contrast Printing<br /> ✔️  A4 & Custom Sizes Available<br/> ✔️ Bulk Order Discounts<br/>  ✔️ Environmentally Friendly Printing Possible
+
+                        ✔️ Customized Designs with Your Logo & Brand Colors<br />✔️ Choose Between 100 GSM, 120 GSM Or Premium Textured Paper<br /> ✔️ High Definition, High Contrast Printing<br /> ✔️  A4 & Custom Sizes Available<br /> ✔️ Bulk Order Discounts<br />  ✔️ Environmentally Friendly Printing Possible
                     </p>
                 </div>
             </div>

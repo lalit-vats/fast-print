@@ -15,7 +15,7 @@ const AboutUs = () => {
   return (
     <div className=' mt-15'>
       <div className='relative'>
-        <Image src={aboutus} alt='aboutus' className='w-full h-full object-cover ' />
+        <Image src={aboutus} alt='Team at Fastprint Delhi working on premium printing services' className='w-full h-full object-cover ' />
         <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>
         </div>
         <h1 className='w-full text-white absolute  z-10 top-1/3  text-center  text-6xl font-bold md:text-8xl'>About Us</h1>
@@ -29,8 +29,8 @@ const AboutUs = () => {
       </div> */}
       <div className='container mx-auto md:px-40 grid grid-cols-1 md:grid-cols-2 p-4 md:py-6 gap-3.5'>
         <div className='relative'>
-        <Image src={FrontImg} alt='image' className='rounded-xl' />
-        <Image src={UpperImg} alt='image' className='hidden md:block rounded-xl absolute z-20 -bottom-6 right-4 shadow-2xl' />
+        <Image src={FrontImg} alt='Modern printing equipment at Fastprint Delhi office' className='rounded-xl' />
+        <Image src={UpperImg} alt='Fastprint Delhi team delivering customized print orders' className='hidden md:block rounded-xl absolute z-20 -bottom-6 right-4 shadow-2xl' />
         </div>
         <div className='flex flex-col items-center justify-center'>
           <h1 className='text-4xl mt-2 md:text-6xl font-medium bg-gradient-to-r from-pink-600 via-purple-500 to-green-700 text-transparent bg-clip-text'>We are just better Quality

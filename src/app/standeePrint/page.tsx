@@ -6,8 +6,17 @@ import { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: "Standee Print",
-  description: "Whether you're showcasing your products, services, or brand story, we offer high-quality standee prints that leave an impression.",
+    title: "Standee Print",
+    description: "Whether you're showcasing your products, services, or brand story, we offer high-quality standee prints that leave an impression.",
+    keywords: [
+        "Standee Print",
+        "Standee printing near delhi",
+        "Standee Printing",
+        "Best Standee Printing near me",
+        "Best Standee Printing in Munirka",
+        "Standee Print in Delhi",
+        "Standee Printing in Gurgaon",
+    ],
 }
 
 const Standy = () => {

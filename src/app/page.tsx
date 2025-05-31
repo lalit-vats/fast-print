@@ -45,8 +45,7 @@ export default function Home() {
 
       <WhatWeDo />
       {/*Testimonials   */}
-      <div className="container grid grid-cols-1 md:grid-cols-2  px-16 items-center ">
-        <div className="p-4">
+      <div className="p-4">
           <h4 className="text-4xl text-center font-medium md:mt-14 mb-2.5 text-[#EF4136]">
             Testimonials
           </h4>
@@ -55,6 +54,8 @@ export default function Home() {
             Our Clients Say
           </h1>
         </div>
+      <div className="container grid grid-cols-1  px-16  items-center">
+        
         <AnimatedTestimonials testimonials={testimonials} />
       </div>
 

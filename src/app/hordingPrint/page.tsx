@@ -7,6 +7,13 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "Hording Print",
   description: "Whether you're showcasing your products, services, or brand story, we provide high-quality hording prints that leave an impression.",
+  keywords: [
+    "Hording Print near me",
+    "Hording Print in Munirka",
+    "Hording Printing",
+    "Hording Print in Delhi",
+    "Hording Printing in Gurgaon",
+  ],
 }
 
 const HordingPrint = () => {
