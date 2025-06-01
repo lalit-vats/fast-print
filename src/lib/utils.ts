@@ -6,8 +6,11 @@ import PrServiceOne from "../../public/Images/best.png";
 import PrSrviceTwo from "../../public/Images/ps2.png";
 import PrSrviceThree from "../../public/Images/ps3.png";
 import Stationery from "../../public/Images/stationery.png";
-import Client1 from "../../public/client1.jpg";
-import TestImage from "../../public/test.png";
+import DoctorImage from "../../public/testimonialDoctor.png";
+import Arvind from "../../public/Arvind.png";
+import Saima from "../../public/saima.png";
+import Rahul from "../../public/rahul.jpg";
+import ManagerImage from "../../public/manager.png";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -29,7 +32,6 @@ export const serviceLink = [
   { name: "Sun Board / Foam Board Prints", href: "/sunBoardPrint" },
   { name: "Calender Print", href: "/calenderPrint" },
   { name: "Folder Print", href: "/folderPrint" },
-
 ];
 
 export const navLinks = [
@@ -79,38 +81,38 @@ export const servicesData: ServiceData[] = [
 export const testimonials = [
   {
     quote:
-      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-    name: "Sarah Chen",
-    designation: "Product Manager at TechFlow",
-    src: Client1,
+      "“These people gave me the precise flex banner I needed for the grand opening of my Clinic. The quality was excellent, and the colors were brilliant. I will most certainly return for any other printing need!”",
+    name: "Dr. Deepti Jain (Physiotherapist)",
+    designation: "Physiotherapist,Orthopedic Physiotherapist",
+    src: DoctorImage,
   },
   {
     quote:
-      "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-    name: "Michael Rodriguez",
-    designation: "CTO at InnovateSphere",
-    src: TestImage,
+      "“ We have been employing their services to maintain all of the banners and signboards in our community for more than a year.  They complete everything on schedule and with excellent quality, from festival banners to entrance boards.  The prints are consistently clear, and they even replace or clean old ones without our prompting.  Very trustworthy and professional!”",
+    name: "Arvind Kumar",
+    designation: "Manager Maintenance B1 Housing Society Vasant Kunj",
+    src: Arvind,
   },
   {
     quote:
-      "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-    name: "Emily Watson",
-    designation: "Operations Director at CloudScale",
-    src: TestImage,
+      "“ For our branding, events, and promotions, we mostly depend on premium flex printing. Fast Print Delhi has continuously produced excellent outcomes.  Their prompt response times, print clarity, and attention to detail have surpassed our expectations.  In order to keep things looking professional at all times, they have also assisted with maintaining our event banners and workplace signage.  Strongly advised for any company searching for trustworthy printing partners.”",
+    name: "Saima",
+    designation: "Marketing Manager at Pernia's Pop Up Shop",
+    src: Saima,
   },
   {
     quote:
-      "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-    name: "James Kim",
-    designation: "Engineering Lead at DataPro",
-    src: TestImage,
+      "“Flex printing is essential to our marketing campaigns and business identity. Fast Print Delhi has shown itself to be a trustworthy partner by regularly producing excellent prints on schedule. Their staff is quick to respond, meticulous, and aware of the value of a polished appearance. They also take care of routine maintenance to keep everything appearing crisp and consistent with the brand, from event backgrounds to in-office signs. We appreciate their service and hope to work with them for a long time.”",
+    name: "Mr. Kapil",
+    designation: "Sr. Manager at Pernia's Pop Up Shop",
+    src: ManagerImage,
   },
   {
     quote:
-      "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-    name: "Lisa Thompson",
-    designation: "VP of Technology at FutureNet",
-    src: TestImage,
+      "“ Being a printing business ourselves, we know how important speed and quality are. For numerous high-volume, urgent flex printing jobs, we have collaborated with Fast Print Service. Their flawless organization, outstanding print clarity, and dedication to deadlines have enabled us to consistently fulfill our client commitments. In fact, Fast Print Service has been a trustworthy addition to our own staff. Highly recommended to anyone searching for a reliable backend support partner in the print sector.”",
+    name: "Mr. Kamal",
+    designation: "Owner of City Print",
+    src: Rahul,
   },
 ];
 

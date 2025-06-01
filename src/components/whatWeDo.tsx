@@ -7,7 +7,7 @@ const WhatWeDo = () => {
   return (
     <>
 
-      <div className='container mx-auto md:px-40 my-12'>
+      <div className='container mx-auto md:px-40 my-12 overflow-hidden'>
         <h2 className='text-4xl font-medium text-center mb-10 text-[#EF4136]'>What We Do</h2>
         <AnimatedContent
           distance={150}

@@ -7,7 +7,16 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "Pamphlet Print",
   description: "Whether you're showcasing your products, services, or brand story, we provide high-quality pamphlet printing that stand out.",
+  keywords: [
+    "Pamphlet Print",
+    "Pamphlet Print near me",
+    "Wholesale pamphlet printing near me",
+    "Pamphlet Printing in Munirka",
+    "Pamphlet Print in Delhi",
+    "Pamphlet Printing in Gurgaon",
+  ],
 }
+
 
 const PamphletPrint = () => {
     return (

@@ -32,7 +32,7 @@ const Footer = () => {
           <ul className='text-gray-900 font-semibold flex flex-col gap-2'>
             {navLinks.map((link) => (
               <li key={link.name} className='hover:text-gray-500 text-[18px]'>
-                <Link 
+                <Link
                   href={link.href}
                   className={`${activeMenu === link.href ? 'text-[#EF4136]' : 'text-gray-900'}`}
                 >
@@ -48,7 +48,7 @@ const Footer = () => {
           <ul className='text-gray-900 font-semibold flex flex-col gap-2'>
             {serviceLink.map((link) => (
               <li key={link.name} className='hover:text-gray-500 text-[18px]'>
-                <Link 
+                <Link
                   href={link.href}
                   className={`${activeMenu === link.href ? 'text-[#EF4136]' : 'text-gray-900'}`}
                 >
@@ -71,9 +71,12 @@ const Footer = () => {
         <div>
           <h1 className='text-[#EF4136] font-bold text-2xl my-3'>Social Media</h1>
           <div className=' font-semibold flex  gap-2'>
-            
-          <FacebookIcon size={18} className='text-[#EF4136]'/>
-          <Instagram size={18} className='text-[#EF4136]' />
+            <a href="https://www.facebook.com/fastprintdelhi/" target='_blank' className='hover:scale-110 transition-transform duration-200 cursor-pointer'>
+              <FacebookIcon size={18} className='text-[#EF4136]' />
+            </a>
+            <a href="https://www.instagram.com/fastprintdelhi/" target='_blank' className='hover:scale-110 transition-transform duration-200 cursor-pointer'>
+              <Instagram size={18} className='text-[#EF4136]' />
+            </a>
           </div>
         </div>
 
