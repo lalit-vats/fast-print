@@ -6,6 +6,7 @@ import Script from "next/script";
 import WhatsappIcon from "@/components/whatsAppIcon";
 import FacebookIcon from "@/components/facebookIcon";
 import InstaIcon from "@/components/instagramIcon";
+import "leaflet/dist/leaflet.css";
 
 
 export const metadata: Metadata = {

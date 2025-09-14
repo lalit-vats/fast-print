@@ -232,7 +232,7 @@ const ContactUs = () => {
                     </div>
                     <div className="rounded-lg shadow-md p-4 mt-1">
                         <p className="mb-2 text-[#101828]">
-                            <strong>Address</strong> : Plot No. 274, Munirka Village
+                            <strong>Address</strong> : Plot No. 153, Munirka Village
                            Near Gurudwara New Delhi 110067
                         </p>
                         <p className="mb-2 text-[#101828]">

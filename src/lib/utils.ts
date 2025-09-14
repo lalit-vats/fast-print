@@ -37,6 +37,7 @@ export const serviceLink = [
 export const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/aboutUs" },
+  { name: "Blog", href: "" },
   { name: "Service", href: "" },
   { name: "Contact Us", href: "/contactUs" },
 ];
