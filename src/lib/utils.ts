@@ -11,6 +11,7 @@ import Arvind from "../../public/Arvind.png";
 import Saima from "../../public/saima.png";
 import Rahul from "../../public/rahul.jpg";
 import ManagerImage from "../../public/manager.png";
+import { Target } from "lucide-react";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -37,7 +38,8 @@ export const serviceLink = [
 export const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/aboutUs" },
-  { name: "Blog", href: "" },
+  { name: "Blog", href: "https://blog.fastprintdelhi.com/", Target: "_blank" },
+  { name: "Gallery", href: "https://works-showcase.vercel.app//", Target: "_blank" },
   { name: "Service", href: "" },
   { name: "Contact Us", href: "/contactUs" },
 ];
