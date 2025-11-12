@@ -75,7 +75,7 @@ export default function RootLayout({
           <FacebookIcon />
           <InstaIcon />
           <WhatsappIcon />
-        </div>
+        </div> 
         <Footer />
       </body>
     </html>

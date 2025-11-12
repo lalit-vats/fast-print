@@ -1,10 +1,11 @@
 "use client"
 
-import MapComponent from '@/components/ui/map';
+import dynamic from 'next/dynamic';
+const MapComponent = dynamic(() => import('@/components/ui/map'), { ssr: false });
 import Image from 'next/image';
 import React from 'react'
 import { useRef } from 'react'
-import Swal from 'sweetalert2'
+// sweetalert2 accesses browser globals; import it dynamically inside handlers
 import aboutus from '../../../public/Images/aboutUsBg.jpg'
 
 const ContactUs = () => {
@@ -35,19 +36,10 @@ const ContactUs = () => {
 
         if (res.success) {
             formRef.current?.reset();
-            Swal.fire({
-                title: "Thanks",
-                text: "We will contact you soon",
-                icon: "success",
-                background: '#000',
-                color: '#fff',
-                didOpen: () => {
-                    const popup = Swal.getPopup();
-                    if (popup) {
-                        popup.style.border = '1px solid #fff';
-                    }
-                }
-            });
+            // Use a simple browser alert to avoid bundling browser-only libs during build
+            if (typeof window !== 'undefined') {
+                window.alert('Thanks — we will contact you soon');
+            }
         }
     };
 

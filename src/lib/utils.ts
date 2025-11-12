@@ -11,8 +11,6 @@ import Arvind from "../../public/Arvind.png";
 import Saima from "../../public/saima.png";
 import Rahul from "../../public/rahul.jpg";
 import ManagerImage from "../../public/manager.png";
-import { Target } from "lucide-react";
-
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }

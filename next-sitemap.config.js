@@ -39,14 +39,7 @@ module.exports = {
       priority: page.priority,
       lastmod: new Date().toISOString(),
       alternateRefs: [],
-      ...(page.image && {
-        news: `
-          <image:image>
-            <image:loc>${config.siteUrl}${page.image}</image:loc>
-            <image:title>Fast Print Delhi - ${page.path.replace('/', '') || 'Home'}</image:title>
-          </image:image>
-        `
-      })
+      // omit images here to avoid builder errors; next-sitemap will still generate standard sitemap entries
     }));
   }
 };
