@@ -70,16 +70,24 @@ const MapComponent = () => {
 
   // Clean up potential leftover Leaflet init data on unmount to avoid "Map container is already initialized."
   useEffect(() => {
+    // copy ref value so cleanup closes over a stable id (avoids react-hooks/exhaustive-deps warning)
+    const id = containerIdRef.current;
     return () => {
       if (typeof window === "undefined") return;
-      const el = document.getElementById(containerIdRef.current);
-      if (el && (el as any)._leaflet_id) {
-        try {
-          // remove Leaflet's marker that tracks initialization on the DOM node
-          delete (el as any)._leaflet_id;
-        } catch (err) {
-          // ignore
-        }
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      // typing for the DOM node with Leaflet's internal marker
+      interface LeafletEl extends HTMLElement {
+        _leaflet_id?: number;
+      }
+
+      const leafEl = el as LeafletEl;
+      if (leafEl._leaflet_id !== undefined) {
+        // remove Leaflet's marker that tracks initialization on the DOM node
+        // (explicitly delete the property instead of using `any` or try/catch)
+        // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+        delete leafEl._leaflet_id;
       }
     };
   }, []);
