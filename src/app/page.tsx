@@ -54,7 +54,7 @@ export default function Home() {
             Our Clients Say
           </h1>
         </div>
-      <div className="container grid grid-cols-1  px-16  items-center">
+      <div className="items-center">
         
         <AnimatedTestimonials testimonials={testimonials} />
       </div>
