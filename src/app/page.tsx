@@ -59,7 +59,7 @@ export default function Home() {
         <AnimatedTestimonials testimonials={testimonials} />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4  bg-pink-100">
+      <div className="grid md:grid-cols-3 gap-4 p-4  bg-pink-100">
         {countUpData.map((d, i) => {
           return (
             <div key={i} className="flex  flex-col items-center justify-center gap-3">
