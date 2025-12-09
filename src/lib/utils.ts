@@ -31,13 +31,14 @@ export const serviceLink = [
   { name: "Sun Board / Foam Board Prints", href: "/sunBoardPrint" },
   { name: "Calender Print", href: "/calenderPrint" },
   { name: "Folder Print", href: "/folderPrint" },
+  { name: "Canvasbag", href: "/canvasBag" },
 ];
 
 export const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/aboutUs" },
   { name: "Blog", href: "https://blog.fastprintdelhi.com/", Target: "_blank" },
-  { name: "Gallery", href: "https://works-showcase.vercel.app//", Target: "_blank" },
+  { name: "Gallery", href: "https://gallery.fastprintdelhi.com/", Target: "_blank" },
   { name: "Service", href: "" },
   { name: "Contact Us", href: "/contactUs" },
 ];
