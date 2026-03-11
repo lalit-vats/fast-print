@@ -25,52 +25,73 @@ export const metadata: Metadata = {
   ],
 };
 const Flexprinting = () => {
-  const serviceSchema = {
+  const seoSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "Flex Printing Service",
-    name: "Professional Flex Printing in Delhi",
-    description: "Fast Print Delhi offers high-quality flex printing, vinyl banners, and glow sign board printing with same-day delivery in Delhi NCR.",
-    provider: {
-      "@id": "https://fastprintdelhi.com/#local-business-schema",
-      "@type": "PrintingService",
-      name: "Fast Print Delhi",
-      url: "https://fastprintdelhi.com",
-      telephone: "+91 9266822218",
-      areaServed: {
-        "@type": "City",
-        name: "Delhi"
-      }
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Flex Printing Solutions",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Star Flex Printing"
-          }
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://fastprintdelhi.com/#printing-service",
+        "name": "Flex Printing Services in Delhi",
+        "description": "Professional flex printing and vinyl banner services in Delhi with high-quality printing and same-day delivery",
+        "provider": {
+          "@type": "LocalBusiness",
+          "@id": "https://fastprintdelhi.com/#local-business",
+          "name": "Fast Print Delhi",
+          "url": "https://fastprintdelhi.com",
+          "telephone": "+91 9266822218"
         },
-        {
+        "areaServed": {
+          "@type": "City",
+          "name": "Delhi"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "150"
+        },
+        "offers": {
           "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Backlit Flex Printing"
+          "priceCurrency": "INR",
+          "price": "6",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "INR",
+            "price": "6",
+            "unitText": "per sq ft"
           }
         }
-      ]
-    }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the price of flex printing per square foot in Delhi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At Fast Print Delhi, we offer competitive flex printing at ₹6 per square foot. The final price may vary based on design complexity, material quality, and order quantity. For bulk orders, we provide special discounts. Contact us for a detailed quote tailored to your specific requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer same-day flex printing delivery in Delhi NCR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer same-day flex printing services for urgent requirements in Delhi NCR. Standard delivery typically takes 2-3 days, but we can expedite your order within 24 hours depending on size and complexity. Contact us immediately to confirm availability for your project."
+            }
+          }
+        ]
+      }
+    ]
   };
 
   return (
     <div className="mt-15">
       <Script
-        id="flex-printing-schema"
+        id="flex-printing-seo-schema"
         type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(seoSchema) }}
       />
 
       {/* Top Section */}
