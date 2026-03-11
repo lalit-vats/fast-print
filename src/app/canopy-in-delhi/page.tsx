@@ -24,7 +24,7 @@ const Canopy = () => {
                 <Image src={BgImage} alt='We make Custom Canopy printing in Delhi' className='w-full h-full object-cover ' />
                 <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>
                 </div>
-                <h1 className='mb-1.5 w-full text-white absolute  z-10 top-1/3  text-center  text-6xl font-bold md:text-8xl'>Canopy</h1>
+                <h1 className='mb-1.5 w-full text-white absolute  z-10 top-1/3  text-center  text-6xl font-bold md:text-8xl'>Canopy Print Delhi</h1>
             </div>
             <div className='container mx-auto md:px-40 grid grid-cols-1 md:grid-cols-2 p-4 md:py-6 gap-3.5'>
                 <div className='relative'>

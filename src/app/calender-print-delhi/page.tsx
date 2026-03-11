@@ -19,7 +19,7 @@ const CalenderPrint
           <Image src={BgImage} alt='Custom Calender print orders are delivered by the Fastprint Delhi team.' className='w-full h-full object-cover ' />
           <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>
           </div>
-          <h1 className='mb-1.5 w-full text-white absolute  z-10 top-1/3  text-center  text-6xl font-bold md:text-8xl'>Calender Print</h1>
+          <h1 className='mb-1.5 w-full text-white absolute  z-10 top-1/3  text-center  text-6xl font-bold md:text-8xl'>Calender Print Delhi</h1>
         </div>
         {/* Discription section */}
         <div className='container mx-auto md:px-40 grid grid-cols-1 md:grid-cols-2 p-4 md:py-6 gap-3.5'>

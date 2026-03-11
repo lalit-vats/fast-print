@@ -16,14 +16,15 @@ export const metadata: Metadata = {
   },
   description: "We Provide Best Print Services",
   keywords: [
-    "printing shop",
-    "flex printing",
-    "printing services",
-    "digital printing",
-    "mug printing",
-    "custom t-shirt print",
-    "banner printing",
-    "Fast Print Delhi"
+   "flex printing in delhi",
+  "banner printing in delhi",
+  "standee printing delhi",
+  "vinyl printing delhi",
+  "sunboard printing delhi",
+  "canvas bag printing delhi",
+  "printing services in delhi",
+  "custom printing delhi",
+  "fast print delhi"
   ],
   openGraph: {
     title: "Fastprint",
@@ -65,6 +66,32 @@ export default function RootLayout({
             gtag('config', 'G-DD705LNQVH');
           `}
         </Script>
+        <Script
+    id="local-business-schema"
+    type="application/ld+json"
+    strategy="afterInteractive"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Fast Print Delhi",
+        "url": "https://fastprintdelhi.com",
+        "telephone": "+91 9266822218",
+        "description": "Fast Print Delhi provides flex printing, banner printing, standee printing, vinyl printing and custom printing services in Delhi.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Delhi",
+          "addressRegion": "Delhi",
+          "addressCountry": "India"
+        },
+        "areaServed": "Delhi NCR",
+        "priceRange": "₹₹",
+        "sameAs": [
+          "https://www.youtube.com/@fastprintdelhi"
+        ]
+      })
+    }}
+  />
       </head>
       <body
         className="poppins.variable relative overflow-x-hidden"

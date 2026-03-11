@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: "Broucre Print",
+  title: "Broucre Print Delhi",
   description: "Whether you're showcasing your products, services, or brand story, we offer high-quality brochure prints that leave an impression.",
 }
 
@@ -17,7 +17,7 @@ const BroucrePrint = () => {
                 <Image src={BgImage} alt='Custom print orders are delivered by the Fastprint Delhi team.' className='w-full h-full object-cover ' />
                 <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>
                 </div>
-                <h1 className='mb-1.5 w-full text-white absolute  z-10 top-1/3  text-center  text-6xl font-bold md:text-8xl'>Broucre Print</h1>
+                <h1 className='mb-1.5 w-full text-white absolute  z-10 top-1/3  text-center  text-6xl font-bold md:text-8xl'>Broucre Print Delhi</h1>
             </div>
             <div className='container mx-auto md:px-40 grid grid-cols-1 md:grid-cols-2 p-4 md:py-6 gap-3.5'>
                 <div className='relative'>
