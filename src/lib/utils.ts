@@ -16,7 +16,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const serviceLink = [
-  { name: "Flex Print", href: "/flexPrinting" },
+  { name: "Flex Print", href: "/flex-printing-delhi" },
   { name: "T-Shirt Print", href: "/tshirtPrint" },
   { name: "Mug Print", href: "/mugPrint" },
   { name: "Vinyl Print", href: "/vinylPrint" },
