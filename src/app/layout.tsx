@@ -74,6 +74,7 @@ export default function RootLayout({
       __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "PrintingService",
+        "@id": "https://fastprintdelhi.com/#printing-service",
         "name": "Fast Print Delhi",
         "url": "https://fastprintdelhi.com",
         "telephone": "+91 9266822218",
