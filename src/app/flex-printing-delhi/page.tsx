@@ -6,7 +6,7 @@ import UpperImg from "../../../public/Images/ab3.jpg"
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Flex Printing",
+  title: "Flex Printing Services in Delhi",
   description: "Whether you are showcasing your products, services, or brand story, we offer high-quality flex printing that leaves an impression.",
   keywords: [
     "Fast Print Flex Printing/ Banner Printing/ Hoarding Printing",
@@ -24,7 +24,7 @@ const Flexprinting = () => {
         <Image src={FlexPrintImg} alt='Fast Print Flex Printing/ Banner Printing/ Hoarding Printing in delhi' className='w-full h-1/2 object-cover ' />
         <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>
         </div>
-        <ShinyText text="Flex Printing" disabled={false} speed={3} className='w-full text-gray-300 absolute z-10 top-1/3 text-center text-6xl font-bold md:text-8xl' />
+        <ShinyText text="Flex Printing Services in Delhi" disabled={false} speed={3} className='w-full text-gray-300 absolute z-10 top-1/3 text-center text-6xl font-bold md:text-8xl' />
         
       </div>
       {/* Discription section */}
