@@ -29,7 +29,7 @@ export const serviceLink = [
   { name: "Diary Print", href: "/diary-print-delhi" },
   { name: "Visiting Cards Print", href: "/visitingcard-print-delhi" },
   { name: "Sun Board / Foam Board Prints", href: "/sunboard-print-delhi" },
-  { name: "Calender Print", href: "/calender-print-delhi" },
+  { name: "Calender Print", href: "/calendar-print-delhi" },
   { name: "Folder Print", href: "/folder-print-delhi" },
   { name: "Canvasbag", href: "/canvas-bag-delhi" },
 ];

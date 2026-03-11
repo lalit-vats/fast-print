@@ -73,7 +73,7 @@ export default function RootLayout({
     dangerouslySetInnerHTML={{
       __html: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "PrintingService",
         "name": "Fast Print Delhi",
         "url": "https://fastprintdelhi.com",
         "telephone": "+91 9266822218",

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 import ShinyText from "@/components/ui/shinyText";
 import FlexPrintImg from "../../../public/Images/flexPrint.jpg";
 import Fp1 from "../../../public/Images/fp-1.png";
@@ -24,8 +25,54 @@ export const metadata: Metadata = {
   ],
 };
 const Flexprinting = () => {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Flex Printing Service",
+    name: "Professional Flex Printing in Delhi",
+    description: "Fast Print Delhi offers high-quality flex printing, vinyl banners, and glow sign board printing with same-day delivery in Delhi NCR.",
+    provider: {
+      "@id": "https://fastprintdelhi.com/#local-business-schema",
+      "@type": "PrintingService",
+      name: "Fast Print Delhi",
+      url: "https://fastprintdelhi.com",
+      telephone: "+91 9266822218",
+      areaServed: {
+        "@type": "City",
+        name: "Delhi"
+      }
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Flex Printing Solutions",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Star Flex Printing"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Backlit Flex Printing"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="mt-15">
+      <Script
+        id="flex-printing-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
       {/* Top Section */}
       <div className="relative">
         <Image
