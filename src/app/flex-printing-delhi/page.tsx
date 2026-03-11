@@ -38,18 +38,18 @@ const Flexprinting = () => {
           "@id": "https://fastprintdelhi.com/#local-business",
           "name": "Fast Print Delhi",
           "url": "https://fastprintdelhi.com",
-          "telephone": "+91 9266822218"
+          "telephone": "+91 9266822218",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
+            "reviewCount": "150"
+          }
         },
         "areaServed": {
           "@type": "City",
           "name": "Delhi"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "bestRating": "5",
-          "worstRating": "1",
-          "reviewCount": "150"
         },
         "offers": {
           "@type": "Offer",
