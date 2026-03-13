@@ -1,4 +1,5 @@
 import React from 'react'
+import Script from 'next/script'
 import BgImage from "../../../public/Images/calenderPrintBg.jpg"
 import SmallImage from "../../../public/Images/calendePrintTwo.jpg"
 import BigImage from "../../../public/Images/calenderBigImage.jpg"
@@ -13,8 +14,41 @@ export const metadata: Metadata = {
 
 const CalenderPrint
   = () => {
+    const calendarSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Calendar Print Delhi",
+      "description": "Custom calendar printing services in Delhi. High-quality, personalized calendars perfect for marketing and gifts throughout the year.",
+      "serviceType": "Calendar Printing",
+      "areaServed": {
+        "@type": "City",
+        "name": "Delhi"
+      },
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Fast Print Delhi",
+        "url": "https://fastprintdelhi.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://fastprintdelhi.com/calendar-print-delhi",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150"
+      }
+    };
     return (
       <div className='mt-15'>
+        <Script
+          id="calendar-print-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(calendarSchema) }}
+        />
         <div className='relative'>
           <Image src={BgImage} alt='Custom Calender print orders are delivered by the Fastprint Delhi team.' className='w-full h-full object-cover ' />
           <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>

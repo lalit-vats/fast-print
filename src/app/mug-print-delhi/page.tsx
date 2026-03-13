@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Script from 'next/script'
 import BgImage from "../../../public/Images/mugPrintingBg.jpg"
 import BigImage from "../../../public/Images/mugPrintBigImage.jpg"
 import SmallImage from "../../../public/Images/mugSmallPic.png"
@@ -17,8 +18,41 @@ export const metadata: Metadata = {
 }
 
 const MugPrinting = () => {
+    const mugSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Mug Print Delhi",
+      "description": "Custom mug printing services in Delhi. High-quality, durable personalized mugs perfect for corporate gifts, events, and special occasions with 12+ years of experience.",
+      "serviceType": "Mug Printing",
+      "areaServed": {
+        "@type": "City",
+        "name": "Delhi"
+      },
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Fast Print Delhi",
+        "url": "https://fastprintdelhi.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://fastprintdelhi.com/mug-print-delhi",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150"
+      }
+    };
     return (
         <div className='mt-15'>
+            <Script
+              id="mug-print-schema"
+              type="application/ld+json"
+              strategy="beforeInteractive"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(mugSchema) }}
+            />
             <div className='relative'>
                 <Image src={BgImage} alt='Custom mug printing in Delhi' className='w-full h-full object-cover ' />
                 <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>

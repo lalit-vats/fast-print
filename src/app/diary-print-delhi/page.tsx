@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 import BgImage from "../../../public/Images/pumplateBg.jpg";
 import BigImage from "../../../public/Images/diarymg.jpg";
 import SmallImage from "../../../public/Images/diaryImgTwo.jpg";
@@ -19,8 +20,41 @@ export const metadata: Metadata = {
 };
 
 const DiaryPrint = () => {
+  const diarySchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Diary Print Delhi",
+    "description": "Custom corporate diary printing services in Delhi. Professional office diaries and stationery printing with high-quality finishes.",
+    "serviceType": "Diary Printing",
+    "areaServed": {
+      "@type": "City",
+      "name": "Delhi"
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Fast Print Delhi",
+      "url": "https://fastprintdelhi.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://fastprintdelhi.com/diary-print-delhi",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "150"
+    }
+  };
   return (
     <div className="mt-15">
+      <Script
+        id="diary-print-schema"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(diarySchema) }}
+      />
       <div className="relative">
         <Image
           src={BgImage}

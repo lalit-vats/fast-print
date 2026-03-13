@@ -14,46 +14,32 @@ export const metadata: Metadata = {
 const BroucrePrint = () => {
  const broucreSchema = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Brochure Printing", // Changed from Service to Product to fix the error
-      "name": "Premium Brochure Printing Delhi",
-      "image": "https://fastprintdelhi.com/_next/static/media/BigImage.jpg",
-      "description": "High-quality bi-fold and tri-fold brochure printing services in Delhi NCR.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Fast Print Delhi"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/broucre-print-delhi",
-        "priceCurrency": "INR",
-        "price": "15.00",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://fastprintdelhi.com/#printing-service"
-        }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the delivery time for brochures in Delhi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We usually deliver custom brochures within 24-48 hours across Delhi NCR."
-          }
-        }
-      ]
-    }
-  ]
+  "@type": "Service",
+  "name": "Premium Brochure Printing Delhi",
+  "image": "https://fastprintdelhi.com/_next/static/media/BigImage.jpg",
+  "description": "High-quality bi-fold and tri-fold brochure printing services in Delhi NCR.",
+  "serviceType": "Brochure Printing",
+  "areaServed": {
+    "@type": "City",
+    "name": "Delhi"
+  },
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Fast Print Delhi",
+    "url": "https://fastprintdelhi.com"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://fastprintdelhi.com/broucre-print-delhi",
+    "priceCurrency": "INR",
+    "price": "15.00",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "150"
+  }
 };
     return (
         <div className='mt-15'>

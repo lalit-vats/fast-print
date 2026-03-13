@@ -1,4 +1,5 @@
 import React from 'react'
+import Script from 'next/script'
 import BgImage from "../../../public/Images/vinaylPrint.png"
 import SmallImage from "../../../public/Images/vinaylUpperPic.png"
 import BigImage from "../../../public/Images/vinaylBigImage.png"
@@ -21,8 +22,41 @@ export const metadata: Metadata = {
 
 const VinaylPrint
   = () => {
+    const vinylSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Vinyl Print Delhi",
+      "description": "Professional vinyl printing and sticker services in Delhi. Weather-resistant, custom vinyl prints for signboards, cars, walls, and branding with 12+ years of experience.",
+      "serviceType": "Vinyl Printing",
+      "areaServed": {
+        "@type": "City",
+        "name": "Delhi"
+      },
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Fast Print Delhi",
+        "url": "https://fastprintdelhi.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://fastprintdelhi.com/vinyl-print-delhi",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150"
+      }
+    };
     return (
       <div className='mt-15'>
+        <Script
+          id="vinyl-print-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(vinylSchema) }}
+        />
         <div className='relative'>
           <Image src={BgImage} alt='aboutus' className='w-full h-full object-cover ' />
           <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>

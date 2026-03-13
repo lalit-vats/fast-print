@@ -1,4 +1,5 @@
 import React from 'react'
+import Script from 'next/script'
 import BgImage from "../../../public/Images/tshirtbg.jpg"
 import Image from 'next/image'
 import BigImage from "../../../public/Images/tshirtconpic.png"
@@ -20,8 +21,41 @@ export const metadata: Metadata = {
 }
 
 const TshirtPrint = () => {
+  const tshirtSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "T-Shirt Print Delhi",
+    "description": "Professional t-shirt printing services in Delhi. Custom t-shirt printing with vibrant, long-lasting prints for individuals and bulk orders with 12+ years of experience.",
+    "serviceType": "T-Shirt Printing",
+    "areaServed": {
+      "@type": "City",
+      "name": "Delhi"
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Fast Print Delhi",
+      "url": "https://fastprintdelhi.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://fastprintdelhi.com/tshirt-print-delhi",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "150"
+    }
+  };
   return (
     <div className='mt-15'>
+      <Script
+        id="tshirt-print-schema"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(tshirtSchema) }}
+      />
       <div className='relative'>
         <Image src={BgImage} alt='aboutus' className='w-full h-full object-cover ' />
         <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>

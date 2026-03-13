@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Script from 'next/script'
 import BgImage from "../../../public/Images/standeeprintBg.jpg"
 import BigImage from "../../../public/Images/standyImg.jpg"
 import SmallImage from "../../../public/Images/standyPrint.jpg"
@@ -20,8 +21,41 @@ export const metadata: Metadata = {
 }
 
 const Standy = () => {
+    const standeeSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Standee Print Delhi",
+      "description": "High-quality roll-up standee printing in Delhi. Lightweight, portable standees with vivid colors and clear images perfect for events, retail, and marketing displays.",
+      "serviceType": "Standee Printing",
+      "areaServed": {
+        "@type": "City",
+        "name": "Delhi"
+      },
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Fast Print Delhi",
+        "url": "https://fastprintdelhi.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://fastprintdelhi.com/standee-print-delhi",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150"
+      }
+    };
     return (
         <div className='mt-15'>
+            <Script
+              id="standee-print-schema"
+              type="application/ld+json"
+              strategy="beforeInteractive"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(standeeSchema) }}
+            />
             <div className='relative'>
                 <Image src={BgImage} alt='aboutus' className='w-full h-full object-cover ' />
                 <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>
