@@ -12,32 +12,32 @@ export const metadata: Metadata = {
 }
 
 const BroucrePrint = () => {
-    const broucreSchema = {
+ const broucreSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Service",
-      "serviceType": "Brochure Printing",
-      "name": "Premium Brochure Printing Services in Delhi - Fast Print Delhi",
-      "description": "High-quality bi-fold, tri-fold, and custom brochure printing in Delhi. Options include glossy, matte, and textured finishes with fast turnaround.",
-      "image": "https://fastprintdelhi.com/_next/static/media/BigImage.jpg", // Replace with actual path to BigImage
-      "provider": {
-        "@id": "https://fastprintdelhi.com/#printing-service"
+      "@type": "Brochure Printing", // Changed from Service to Product to fix the error
+      "name": "Premium Brochure Printing Delhi",
+      "image": "https://fastprintdelhi.com/_next/static/media/BigImage.jpg",
+      "description": "High-quality bi-fold and tri-fold brochure printing services in Delhi NCR.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Fast Print Delhi"
       },
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
+      "offers": {
+        "@type": "Offer",
+        "url": "https://fastprintdelhi.com/broucre-print-delhi",
+        "priceCurrency": "INR",
+        "price": "15.00",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://fastprintdelhi.com/#printing-service"
+        }
       },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
         "reviewCount": "150"
-      },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "INR",
-        "price": "15.00", // Adjusted for brochure pricing
-        "availability": "https://schema.org/InStock"
       }
     },
     {
@@ -45,18 +45,10 @@ const BroucrePrint = () => {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What types of brochure folds do you offer in Delhi?",
+          "name": "What is the delivery time for brochures in Delhi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Fast Print Delhi offers various fold styles including Bi-Fold, Tri-Fold, Z-Fold, and custom gate folds to suit your brand's promotional needs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What paper finishes are available for brochure printing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We provide several finish options including Premium Glossy for vibrant colors, Matte for a professional look, and Textured finishes for a luxury feel."
+            "text": "We usually deliver custom brochures within 24-48 hours across Delhi NCR."
           }
         }
       ]
