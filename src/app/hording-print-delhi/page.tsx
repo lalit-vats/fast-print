@@ -20,30 +20,58 @@ export const metadata: Metadata = {
 const HordingPrint = () => {
     const hordingSchema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Hording Print Delhi",
-      "description": "Professional hoarding printing services in Delhi. Weatherproof, UV-resistant hoarding prints for outdoor advertising and events with 12+ years of experience.",
-      "serviceType": "Hoarding Printing",
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fast Print Delhi",
-        "url": "https://fastprintdelhi.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/hording-print-delhi",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://fastprintdelhi.com/#printing-service",
+          "name": "Hording Print Delhi",
+          "description": "Professional hoarding printing services in Delhi. Weatherproof, UV-resistant hoarding prints for outdoor advertising and events with 12+ years of experience.",
+          "serviceType": "Hoarding Printing",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://fastprintdelhi.com/#local-business",
+            "name": "Fast Print Delhi",
+            "url": "https://fastprintdelhi.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "150"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Delhi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the cost of hoarding printing per square foot in Delhi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our hoarding printing is competitively priced starting at affordable rates per square foot. Pricing depends on material quality and design complexity. We also offer bulk discounts. Contact us for a customized quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are your hoardings weather-resistant and UV-protected?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all our hoardings are printed with UV-resistant inks and weatherproof materials to withstand Delhi's harsh climate. They maintain vibrant colors and durability even after extended outdoor exposure."
+              }
+            }
+          ]
+        }
+      ]
     };
     return (
         <div className='mt-15'>

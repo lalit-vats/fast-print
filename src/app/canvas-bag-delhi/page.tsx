@@ -29,30 +29,58 @@ export const metadata: Metadata = {
 const Canvasbag = () => {
   const canvasBagSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Canvas Bag Manufacturing & Printing Delhi",
-    "description": "Custom canvas bag manufacturer and printing service in Delhi. High-quality eco-friendly canvas bags with logo printing for businesses and promotions.",
-    "serviceType": "Canvas Bag Printing",
-    "areaServed": {
-      "@type": "City",
-      "name": "Delhi"
-    },
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Fast Print Delhi",
-      "url": "https://fastprintdelhi.com"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://fastprintdelhi.com/canvas-bag-delhi",
-      "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    }
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://fastprintdelhi.com/#printing-service",
+        "name": "Canvas Bag Manufacturing & Printing Delhi",
+        "description": "Custom canvas bag manufacturer and printing service in Delhi. High-quality eco-friendly canvas bags with logo printing for businesses and promotions.",
+        "serviceType": "Canvas Bag Printing",
+        "provider": {
+          "@type": "LocalBusiness",
+          "@id": "https://fastprintdelhi.com/#local-business",
+          "name": "Fast Print Delhi",
+          "url": "https://fastprintdelhi.com",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
+            "reviewCount": "150"
+          }
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Delhi"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the cost of custom canvas bag printing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Canvas bag printing costs vary based on bag quality, size, print area, and quantity. We offer competitive rates for both small and bulk orders. Contact us with your specifications for an accurate quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you manufacture eco-friendly canvas bags?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we specialize in eco-friendly canvas bags that are sustainable and perfect for promoting your brand responsibly. Our bags are durable and available in various sizes and colors with custom logo printing."
+            }
+          }
+        ]
+      }
+    ]
   };
   return (
     <div className="mt-15">

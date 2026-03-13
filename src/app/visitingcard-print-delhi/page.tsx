@@ -28,30 +28,58 @@ const VinaylPrint
   = () => {
     const visitingCardSchema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Visiting Cards Print Delhi",
-      "description": "Premium visiting card printing in Delhi. Professional business cards with various finishes and designs, perfect for making lasting impressions. Affordable bulk orders available.",
-      "serviceType": "Visiting Cards Printing",
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fast Print Delhi",
-        "url": "https://fastprintdelhi.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/visitingcard-print-delhi",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://fastprintdelhi.com/#printing-service",
+          "name": "Visiting Cards Print Delhi",
+          "description": "Premium visiting card printing in Delhi. Professional business cards with various finishes and designs, perfect for making lasting impressions. Affordable bulk orders available.",
+          "serviceType": "Visiting Cards Printing",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://fastprintdelhi.com/#local-business",
+            "name": "Fast Print Delhi",
+            "url": "https://fastprintdelhi.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "150"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Delhi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the price of visiting card printing in Delhi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Visiting card printing is affordable starting from very competitive rates. Prices depend on card stock quality and finishes chosen. Bulk orders receive significant discounts. Contact us for exact pricing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What finish options are available for business cards?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We offer multiple finish options including matte, glossy, and textured finishes. You can also choose embossing, foil stamping, or die-cutting for premium looks. All options ensure professional appearance and durability."
+              }
+            }
+          ]
+        }
+      ]
     };
     return (
       <div className='mt-15'>

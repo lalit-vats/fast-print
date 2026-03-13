@@ -14,32 +14,59 @@ export const metadata: Metadata = {
 const BroucrePrint = () => {
  const broucreSchema = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Premium Brochure Printing Delhi",
-  "image": "https://fastprintdelhi.com/_next/static/media/BigImage.jpg",
-  "description": "High-quality bi-fold and tri-fold brochure printing services in Delhi NCR.",
-  "serviceType": "Brochure Printing",
-  "areaServed": {
-    "@type": "City",
-    "name": "Delhi"
-  },
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Fast Print Delhi",
-    "url": "https://fastprintdelhi.com"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "https://fastprintdelhi.com/broucre-print-delhi",
-    "priceCurrency": "INR",
-    "price": "15.00",
-    "availability": "https://schema.org/InStock"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "150"
-  }
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://fastprintdelhi.com/#printing-service",
+      "name": "Premium Brochure Printing Delhi",
+      "description": "High-quality bi-fold and tri-fold brochure printing services in Delhi NCR.",
+      "serviceType": "Brochure Printing",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://fastprintdelhi.com/#local-business",
+        "name": "Fast Print Delhi",
+        "url": "https://fastprintdelhi.com",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "reviewCount": "150"
+        }
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Delhi"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "15.00",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the delivery time for brochures in Delhi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We usually deliver custom brochures within 24-48 hours across Delhi NCR for standard orders. Rush delivery available for urgent requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What brochure folding options do you provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer multiple folding styles including bi-fold, tri-fold, z-fold, and more. Choose the format that best suits your content and distribution needs."
+          }
+        }
+      ]
+    }
+  ]
 };
     return (
         <div className='mt-15'>

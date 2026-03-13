@@ -24,30 +24,58 @@ const SunboardPrint
   = () => {
     const sunboardSchema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Sunboard Print Delhi",
-      "description": "Professional sunboard printing services in Delhi. High-quality, durable sunboard prints for retail branding, signage, and promotional standees.",
-      "serviceType": "Sunboard Printing",
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fast Print Delhi",
-        "url": "https://fastprintdelhi.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/sunboard-print-delhi",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://fastprintdelhi.com/#printing-service",
+          "name": "Sunboard Print Delhi",
+          "description": "Professional sunboard printing services in Delhi. High-quality, durable sunboard prints for retail branding, signage, and promotional standees.",
+          "serviceType": "Sunboard Printing",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://fastprintdelhi.com/#local-business",
+            "name": "Fast Print Delhi",
+            "url": "https://fastprintdelhi.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "150"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Delhi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the cost of sunboard printing per square foot?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sunboard printing is competitively priced depending on size, material quality, and design complexity. We offer special rates for bulk orders and large installations. Contact us for a customized quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How durable are sunboard prints for long-term use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our sunboard prints are highly durable and designed for long-term indoor and semi-outdoor use. They resist fading and maintain visual appeal for extended periods, making them ideal for permanent branding."
+              }
+            }
+          ]
+        }
+      ]
     };
     return (
       <div className='mt-15'>

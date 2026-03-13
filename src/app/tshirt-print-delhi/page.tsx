@@ -23,30 +23,58 @@ export const metadata: Metadata = {
 const TshirtPrint = () => {
   const tshirtSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "T-Shirt Print Delhi",
-    "description": "Professional t-shirt printing services in Delhi. Custom t-shirt printing with vibrant, long-lasting prints for individuals and bulk orders with 12+ years of experience.",
-    "serviceType": "T-Shirt Printing",
-    "areaServed": {
-      "@type": "City",
-      "name": "Delhi"
-    },
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Fast Print Delhi",
-      "url": "https://fastprintdelhi.com"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://fastprintdelhi.com/tshirt-print-delhi",
-      "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    }
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://fastprintdelhi.com/#printing-service",
+        "name": "T-Shirt Print Delhi",
+        "description": "Professional t-shirt printing services in Delhi. Custom t-shirt printing with vibrant, long-lasting prints for individuals and bulk orders with 12+ years of experience.",
+        "serviceType": "T-Shirt Printing",
+        "provider": {
+          "@type": "LocalBusiness",
+          "@id": "https://fastprintdelhi.com/#local-business",
+          "name": "Fast Print Delhi",
+          "url": "https://fastprintdelhi.com",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
+            "reviewCount": "150"
+          }
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Delhi"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the price of t-shirt printing per piece?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "T-shirt printing costs depend on design complexity and order quantity. We offer competitive pricing for both single pieces and bulk orders. Special discounts available for larger quantities. Contact us for exact pricing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long do printed t-shirts last after washing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our prints are designed to last for years even with regular washing. The high-quality inks and printing process ensure vibrant colors remain intact through numerous wash cycles. Your designs stay fresh and bold."
+            }
+          }
+        ]
+      }
+    ]
   };
   return (
     <div className='mt-15'>

@@ -24,30 +24,58 @@ const VinaylPrint
   = () => {
     const vinylSchema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Vinyl Print Delhi",
-      "description": "Professional vinyl printing and sticker services in Delhi. Weather-resistant, custom vinyl prints for signboards, cars, walls, and branding with 12+ years of experience.",
-      "serviceType": "Vinyl Printing",
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fast Print Delhi",
-        "url": "https://fastprintdelhi.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/vinyl-print-delhi",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://fastprintdelhi.com/#printing-service",
+          "name": "Vinyl Print Delhi",
+          "description": "Professional vinyl printing and sticker services in Delhi. Weather-resistant, custom vinyl prints for signboards, cars, walls, and branding with 12+ years of experience.",
+          "serviceType": "Vinyl Printing",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://fastprintdelhi.com/#local-business",
+            "name": "Fast Print Delhi",
+            "url": "https://fastprintdelhi.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "150"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Delhi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the cost of vinyl printing per square foot?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Vinyl printing costs are competitive and depend on material quality and design complexity. We offer special rates for large-format prints and bulk orders. Contact us for a detailed quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are vinyl stickers and prints weather-resistant?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all our vinyl prints and stickers are weather-resistant, UV-protected, and designed for outdoor use. They withstand rain, sun, and harsh weather conditions while maintaining vibrant colors for years."
+              }
+            }
+          ]
+        }
+      ]
     };
     return (
       <div className='mt-15'>

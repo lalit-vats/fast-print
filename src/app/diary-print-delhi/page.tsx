@@ -22,30 +22,58 @@ export const metadata: Metadata = {
 const DiaryPrint = () => {
   const diarySchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Diary Print Delhi",
-    "description": "Custom corporate diary printing services in Delhi. Professional office diaries and stationery printing with high-quality finishes.",
-    "serviceType": "Diary Printing",
-    "areaServed": {
-      "@type": "City",
-      "name": "Delhi"
-    },
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Fast Print Delhi",
-      "url": "https://fastprintdelhi.com"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://fastprintdelhi.com/diary-print-delhi",
-      "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    }
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://fastprintdelhi.com/#printing-service",
+        "name": "Diary Print Delhi",
+        "description": "Custom corporate diary printing services in Delhi. Professional office diaries and stationery printing with high-quality finishes.",
+        "serviceType": "Diary Printing",
+        "provider": {
+          "@type": "LocalBusiness",
+          "@id": "https://fastprintdelhi.com/#local-business",
+          "name": "Fast Print Delhi",
+          "url": "https://fastprintdelhi.com",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
+            "reviewCount": "150"
+          }
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Delhi"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the price of corporate diary printing in Delhi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Corporate diary printing costs depend on size, paper quality, binding, and customization. We offer competitive rates for bulk orders with discounts. Contact us for detailed pricing based on your requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you customize diaries with company logos and branding?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer complete customization options including embossing, full-color printing, and premium binding. Your company logo and branding can be prominently featured. Perfect for corporate gifts and employee engagement."
+            }
+          }
+        ]
+      }
+    ]
   };
   return (
     <div className="mt-15">

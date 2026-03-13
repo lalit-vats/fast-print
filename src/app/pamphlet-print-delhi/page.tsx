@@ -22,30 +22,58 @@ export const metadata: Metadata = {
 const PamphletPrint = () => {
     const pamphletSchema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Pamphlet Print Delhi",
-      "description": "Professional pamphlet printing services in Delhi. Custom printed pamphlets with various finishes for marketing, events, and promotions at affordable prices.",
-      "serviceType": "Pamphlet Printing",
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fast Print Delhi",
-        "url": "https://fastprintdelhi.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/pamphlet-print-delhi",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://fastprintdelhi.com/#printing-service",
+          "name": "Pamphlet Print Delhi",
+          "description": "Professional pamphlet printing services in Delhi. Custom printed pamphlets with various finishes for marketing, events, and promotions at affordable prices.",
+          "serviceType": "Pamphlet Printing",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://fastprintdelhi.com/#local-business",
+            "name": "Fast Print Delhi",
+            "url": "https://fastprintdelhi.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "150"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Delhi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the price of pamphlet printing in Delhi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pamphlet printing costs depend on size, paper quality, finishing options, and quantity. We offer competitive rates with special discounts for bulk orders. Contact us for a detailed quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What finishes are available for pamphlet printing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We offer multiple finishing options including glossy, matte, and textured finishes. Choose the one that best suits your brand and marketing goals. All finishes ensure professional appearance and durability."
+              }
+            }
+          ]
+        }
+      ]
     };
     return (
         <div className='mt-15'>

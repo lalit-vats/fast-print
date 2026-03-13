@@ -20,30 +20,58 @@ export const metadata: Metadata = {
 const LetterheadPrint = () => {
     const letterheadSchema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Letterhead Print Delhi",
-      "description": "Professional letterhead printing services in Delhi. Custom branded letterheads with high-quality designs on premium paper for business correspondence.",
-      "serviceType": "Letterhead Printing",
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fast Print Delhi",
-        "url": "https://fastprintdelhi.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/letterhead-print-delhi",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://fastprintdelhi.com/#printing-service",
+          "name": "Letterhead Print Delhi",
+          "description": "Professional letterhead printing services in Delhi. Custom branded letterheads with high-quality designs on premium paper for business correspondence.",
+          "serviceType": "Letterhead Printing",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://fastprintdelhi.com/#local-business",
+            "name": "Fast Print Delhi",
+            "url": "https://fastprintdelhi.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "150"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Delhi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the price of letterhead printing in Delhi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Letterhead printing prices depend on paper quality, design complexity, and order quantity. We offer competitive rates with bulk discounts available. Contact us with your specifications for an accurate quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What paper options are available for letterhead printing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We offer various premium paper options including 100 GSM, 120 GSM, and specialty textured papers. All materials ensure professional appearance and durability. Choose the finish that best represents your brand."
+              }
+            }
+          ]
+        }
+      ]
     };
     return (
         <div className='mt-15'>

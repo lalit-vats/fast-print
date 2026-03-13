@@ -23,30 +23,58 @@ export const metadata: Metadata = {
 const Standy = () => {
     const standeeSchema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Standee Print Delhi",
-      "description": "High-quality roll-up standee printing in Delhi. Lightweight, portable standees with vivid colors and clear images perfect for events, retail, and marketing displays.",
-      "serviceType": "Standee Printing",
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fast Print Delhi",
-        "url": "https://fastprintdelhi.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/standee-print-delhi",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://fastprintdelhi.com/#printing-service",
+          "name": "Standee Print Delhi",
+          "description": "High-quality roll-up standee printing in Delhi. Lightweight, portable standees with vivid colors and clear images perfect for events, retail, and marketing displays.",
+          "serviceType": "Standee Printing",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://fastprintdelhi.com/#local-business",
+            "name": "Fast Print Delhi",
+            "url": "https://fastprintdelhi.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "150"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Delhi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the cost of roll-up standee printing in Delhi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Standee printing costs depend on size and material quality. We offer competitive pricing for both single units and bulk orders. Contact us for a customized quote based on your specifications."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are standees easy to transport and setup?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our roll-up standees are lightweight and portable, designed for easy transport and quick setup. They're ideal for trade shows, events, retail displays, and on-the-go marketing campaigns."
+              }
+            }
+          ]
+        }
+      ]
     };
     return (
         <div className='mt-15'>

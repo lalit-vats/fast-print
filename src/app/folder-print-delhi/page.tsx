@@ -24,30 +24,58 @@ const FolderPrint
   = () => {
     const folderSchema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Folder Print Delhi",
-      "description": "Professional folder printing services in Delhi. Custom branded folders for business meetings, presentations, and marketing materials.",
-      "serviceType": "Folder Printing",
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fast Print Delhi",
-        "url": "https://fastprintdelhi.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/folder-print-delhi",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://fastprintdelhi.com/#printing-service",
+          "name": "Folder Print Delhi",
+          "description": "Professional folder printing services in Delhi. Custom branded folders for business meetings, presentations, and marketing materials.",
+          "serviceType": "Folder Printing",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://fastprintdelhi.com/#local-business",
+            "name": "Fast Print Delhi",
+            "url": "https://fastprintdelhi.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "150"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Delhi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the price of folder printing in Delhi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Folder printing costs depend on size, paper quality, finishing options, and quantity. We offer competitive rates starting from affordable prices. Contact us with your specifications for a detailed quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you create custom folder designs with our branding?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we design custom folders with your logo, colors, and branding. We offer options for die-cuts, business card slots, and premium finishes. Perfect for professional presentations and client proposals."
+              }
+            }
+          ]
+        }
+      ]
     };
     return (
       <div className='mt-15'>

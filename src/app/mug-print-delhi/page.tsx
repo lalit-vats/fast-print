@@ -20,30 +20,58 @@ export const metadata: Metadata = {
 const MugPrinting = () => {
     const mugSchema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Mug Print Delhi",
-      "description": "Custom mug printing services in Delhi. High-quality, durable personalized mugs perfect for corporate gifts, events, and special occasions with 12+ years of experience.",
-      "serviceType": "Mug Printing",
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fast Print Delhi",
-        "url": "https://fastprintdelhi.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/mug-print-delhi",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://fastprintdelhi.com/#printing-service",
+          "name": "Mug Print Delhi",
+          "description": "Custom mug printing services in Delhi. High-quality, durable personalized mugs perfect for corporate gifts, events, and special occasions with 12+ years of experience.",
+          "serviceType": "Mug Printing",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://fastprintdelhi.com/#local-business",
+            "name": "Fast Print Delhi",
+            "url": "https://fastprintdelhi.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "150"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Delhi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the cost of custom mug printing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mug printing costs depend on quantity and print quality. We offer competitive rates starting from affordable prices. Bulk orders receive special discounts. Contact us for a customized quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long do printed mugs last?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our printed mugs are extremely durable with high-quality, fade-resistant prints. They maintain vibrant colors even after multiple washes and years of regular use. Perfect for long-lasting corporate gifts."
+              }
+            }
+          ]
+        }
+      ]
     };
     return (
         <div className='mt-15'>

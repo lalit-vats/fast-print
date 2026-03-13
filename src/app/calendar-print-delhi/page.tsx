@@ -16,30 +16,58 @@ const CalenderPrint
   = () => {
     const calendarSchema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Calendar Print Delhi",
-      "description": "Custom calendar printing services in Delhi. High-quality, personalized calendars perfect for marketing and gifts throughout the year.",
-      "serviceType": "Calendar Printing",
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fast Print Delhi",
-        "url": "https://fastprintdelhi.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/calendar-print-delhi",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://fastprintdelhi.com/#printing-service",
+          "name": "Calendar Print Delhi",
+          "description": "Custom calendar printing services in Delhi. High-quality, personalized calendars perfect for marketing and gifts throughout the year.",
+          "serviceType": "Calendar Printing",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://fastprintdelhi.com/#local-business",
+            "name": "Fast Print Delhi",
+            "url": "https://fastprintdelhi.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "150"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Delhi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the price of calendar printing in Delhi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "At Fast Print Delhi, we offer competitive calendar printing services starting at affordable rates. Pricing varies based on size, material quality, and order quantity. Contact us for a detailed quote tailored to your specific requirements."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer custom calendar designs and printing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we offer fully customizable calendar printing with your own designs, branding, and photos. Our team can help you create personalized calendars perfect for corporate gifts and marketing. Contact us to get started."
+              }
+            }
+          ]
+        }
+      ]
     };
     return (
       <div className='mt-15'>

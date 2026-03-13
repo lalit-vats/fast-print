@@ -21,30 +21,58 @@ export const metadata: Metadata = {
 const Canopy = () => {
     const canopySchema = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Canopy Print Delhi",
-      "description": "Premium canopy printing and rental services in Delhi. High-quality custom branded canopies for events, exhibitions, and promotions.",
-      "serviceType": "Canopy Printing",
-      "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fast Print Delhi",
-        "url": "https://fastprintdelhi.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://fastprintdelhi.com/canopy-in-delhi",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150"
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://fastprintdelhi.com/#printing-service",
+          "name": "Canopy Print Delhi",
+          "description": "Premium canopy printing and rental services in Delhi. High-quality custom branded canopies for events, exhibitions, and promotions.",
+          "serviceType": "Canopy Printing",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://fastprintdelhi.com/#local-business",
+            "name": "Fast Print Delhi",
+            "url": "https://fastprintdelhi.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "150"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Delhi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the cost of canopy printing in Delhi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "At Fast Print Delhi, we offer competitive canopy printing and rental services. Pricing depends on size, material, and customization. We also provide complete rental solutions with setup and breakdown included. Contact us for a customized quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you provide canopy rentals for events in Delhi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we offer complete canopy rental solutions for events, exhibitions, and promotions in Delhi NCR. We provide setup, takedown, and all necessary materials. Our canopies are sturdy and weather-resistant. Contact us to book your event canopy."
+              }
+            }
+          ]
+        }
+      ]
     };
     return (
         <div className='mt-15'>
