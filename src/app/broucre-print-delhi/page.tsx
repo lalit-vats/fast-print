@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Script from 'next/script';
 import BgImage from "../../../public/Images/broucrePrint.jpg"
 import BigImage from "../../../public/Images/broucrePrintOne.jpg"
 import SmallImage from "../../../public/Images/brourceUpperPic.jpg"
@@ -11,8 +12,66 @@ export const metadata: Metadata = {
 }
 
 const BroucrePrint = () => {
+    const broucreSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "serviceType": "Brochure Printing",
+      "name": "Premium Brochure Printing Services in Delhi - Fast Print Delhi",
+      "description": "High-quality bi-fold, tri-fold, and custom brochure printing in Delhi. Options include glossy, matte, and textured finishes with fast turnaround.",
+      "image": "https://fastprintdelhi.com/_next/static/media/BigImage.jpg", // Replace with actual path to BigImage
+      "provider": {
+        "@id": "https://fastprintdelhi.com/#printing-service"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Delhi"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "15.00", // Adjusted for brochure pricing
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What types of brochure folds do you offer in Delhi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fast Print Delhi offers various fold styles including Bi-Fold, Tri-Fold, Z-Fold, and custom gate folds to suit your brand's promotional needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What paper finishes are available for brochure printing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We provide several finish options including Premium Glossy for vibrant colors, Matte for a professional look, and Textured finishes for a luxury feel."
+          }
+        }
+      ]
+    }
+  ]
+};
     return (
         <div className='mt-15'>
+            {/* SEO Schema Injection */}
+            <Script
+                id="broucre-print-schema"
+                type="application/ld+json"
+                strategy="beforeInteractive"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(broucreSchema) }}
+            />
             <div className='relative'>
                 <Image src={BgImage} alt='Custom print orders are delivered by the Fastprint Delhi team.' className='w-full h-full object-cover ' />
                 <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'>
