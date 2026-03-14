@@ -25,6 +25,7 @@ const Services = () => {
                   src={data.img}
                   alt="Print Icon"
                   height={60}
+                  loading="lazy"
                   className="transform transition-transform duration-300 hover:rotate-45"
                 />
                 <h3 className="text-2xl font-medium text-[#EF4136]">
@@ -51,6 +52,7 @@ const Services = () => {
                       alt="service image"
                       width={247}
                       height={171}
+                      loading="lazy"
                       className="animate-[bounce_4s_infinite] translate-y-2 ease-linear"
                     />
                   </>
@@ -61,6 +63,7 @@ const Services = () => {
                       alt="service image"
                       width={247}
                       height={171}
+                      loading="lazy"
                       className="animate-[bounce_4s_infinite] -translate-y-2 ease-linear"
                     />
                     <p className="text-[#EF4136] font-bold text-2xl">{d.sno}</p>

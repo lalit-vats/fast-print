@@ -22,7 +22,7 @@ const WhatWeDo = () => {
         >
           <div className='grid grid-cols-1 md:grid-cols-2 p-4 md:py-6 gap-3.5'>
             <div className='relative'>
-              <Image src="/Images/whatWeDo.jpg" alt='image' className='rounded-xl' width={500} height={300} />
+              <Image src="/Images/whatWeDo.jpg" alt='image' className='rounded-xl' width={500} height={300} loading='lazy' />
               {/* <Image src="/Images/vinaylUpperPic.png" alt='image' className='hidden md:block rounded-xl absolute z-20 -bottom-6 right-4 shadow-2xl' width={200} height={150} /> */}
             </div>
             <div className='flex flex-col items-center justify-center'>

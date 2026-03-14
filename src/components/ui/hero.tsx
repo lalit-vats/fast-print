@@ -40,11 +40,11 @@ const Hero = () => {
             <Image
               src={HeroImg}
               alt="Hero Graphic"
-              width={650}
-              height={650}
+              width={500}
+              height={500}
               priority
               loading="eager"
-              quality={90}
+              quality={70}
             />
           </div>
         </div>

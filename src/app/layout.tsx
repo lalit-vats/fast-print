@@ -56,6 +56,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Preload hero image */}
+        <link rel="preload" as="image" href="/Images/ab1 1.png" />
         {/* Google tag (gtag.js) */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-DD705LNQVH" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
