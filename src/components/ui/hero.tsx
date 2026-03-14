@@ -40,9 +40,11 @@ const Hero = () => {
             <Image
               src={HeroImg}
               alt="Hero Graphic"
-              width={650} // Adjust width as needed
-              height={650} // Adjust height as needed
-              // className="w-full max-w-md"
+              width={650}
+              height={650}
+              priority
+              loading="eager"
+              quality={90}
             />
           </div>
         </div>
