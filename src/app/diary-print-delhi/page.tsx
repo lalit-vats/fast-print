@@ -99,7 +99,7 @@ const DiaryPrint = () => {
           <Image
             src={BigImage}
             alt="diary printing in delhi"
-            className="rounded-xl animate__fadeInDown"
+            className="rounded-xl animate-in fade-in slide-in-from-top-4 duration-500"
           />
           <Image
             src={SmallImage}

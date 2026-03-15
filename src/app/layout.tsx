@@ -6,7 +6,7 @@ import Script from "next/script";
 import WhatsappIcon from "@/components/whatsAppIcon";
 import FacebookIcon from "@/components/facebookIcon";
 import InstaIcon from "@/components/instagramIcon";
-import "leaflet/dist/leaflet.css";
+// Leaflet CSS removed - lazy loaded in contact page only
 
 
 export const metadata: Metadata = {
@@ -56,11 +56,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Preload hero image */}
-        <link rel="preload" as="image" href="/Images/ab1 1.png" />
-        {/* Google tag (gtag.js) */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-DD705LNQVH" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">
+        {/* Preload hero image - critical for LCP */}
+        <link rel="preload" as="image" href="/Images/ab1 1.png" fetchpriority="high" />
+        {/* Font optimization for FCP improvement */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Google tag (gtag.js) - deferred to lazyOnload for better FCP */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-DD705LNQVH" strategy="lazyOnload" />
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -71,7 +74,7 @@ export default function RootLayout({
         <Script
     id="local-business-schema"
     type="application/ld+json"
-    strategy="afterInteractive"
+    strategy="lazyOnload"
     dangerouslySetInnerHTML={{
       __html: JSON.stringify({
         "@context": "https://schema.org",

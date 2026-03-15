@@ -4,6 +4,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Font optimization for better FCP */
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+  font-display: swap;
+  font-weight: 400 900;
+  font-style: normal;
+}
+
 
 @theme inline {
   --color-background: var(--background);

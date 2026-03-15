@@ -85,7 +85,7 @@ const BroucrePrint = () => {
             </div>
             <div className='container mx-auto md:px-40 grid grid-cols-1 md:grid-cols-2 p-4 md:py-6 gap-3.5'>
                 <div className='relative'>
-                    <Image src={BigImage} alt='We Make Custom Broucre printing in Delhi' className='rounded-xl animate__fadeInDown' />
+                    <Image src={BigImage} alt='We Make Custom Broucre printing in Delhi' className='rounded-xl animate-in fade-in slide-in-from-top-4 duration-500' />
                     <Image src={SmallImage} alt='Custom Broucre printing in Delhi' className='hidden md:block rounded-xl absolute z-20 -bottom-6 right-4 shadow-2xl' />
                 </div>
                 <div className='flex flex-col '>
