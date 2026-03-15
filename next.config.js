@@ -17,15 +17,6 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', 'react-icons'],
   },
-  webpack: (config, { isServer }) => {
-    config.optimization = {
-      ...config.optimization,
-      minimize: true,
-      usedExports: true,
-      sideEffects: false,
-    };
-    return config;
-  },
 }
 
 module.exports = nextConfig
