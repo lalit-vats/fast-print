@@ -6,7 +6,7 @@ import RotatingText from "../RotatingText";
  const texts = ["T-shirt", "Caps", "Flex", "Vinyl"]
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center ">
+    <section className="mt-14 py-12 md:min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-6 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Side - Bold Text */}
@@ -36,7 +36,7 @@ const Hero = () => {
           </div>
 
           {/* Right Side - Graphic (Replace with an actual image) */}
-          <div className="flex justify-center">
+          <div className="hidden md:flex justify-center">
             <Image
               src={HeroImg}
               alt="Hero Graphic"

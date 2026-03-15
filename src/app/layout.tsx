@@ -100,7 +100,8 @@ export default function RootLayout({
   />
       </head>
       <body
-        className="poppins.variable relative overflow-x-hidden"
+        className="relative overflow-x-hidden"
+        suppressHydrationWarning
       >
         <Header />
         {children}
