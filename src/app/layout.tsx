@@ -57,7 +57,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Preload hero image - critical for LCP */}
-        <link rel="preload" as="image" href="/Images/ab1 1.png" fetchpriority="high" />
+        <link rel="preload" as="image" href="/Images/ab1 1.png" fetchPriority="high" />
         {/* Font optimization for FCP improvement */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
